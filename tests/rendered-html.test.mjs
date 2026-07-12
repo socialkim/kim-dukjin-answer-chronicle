@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -8,23 +9,42 @@ async function render() {
   return worker.fetch(new Request("http://localhost/", { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("server-renders the finished answer chronicle", async () => {
+test("server-renders the complete 69-episode answer chronicle", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /김덕진 답변 연대기/);
   assert.match(html, /답은 바뀌었다/);
-  assert.match(html, /OpenAI와 ChatGPT/);
+  assert.match(html, /69 EPISODES · 23H 33M · 69\/69 TRANSCRIPTS/);
+  assert.match(html, /김덕진 에피소드 69편 전수조사/);
+  assert.match(html, /69\/69.*한국어 자막/);
+  assert.match(html, /OpenAI·ChatGPT/);
+  assert.match(html, /Google·Gemini/);
+  assert.match(html, /Anthropic·Claude/);
+  assert.equal((html.match(/class="episode-card"/g) ?? []).length, 69);
+  assert.match(html, /POWERED BY CHATGPT 5\.6SOL/);
   assert.match(html, /Dukjin Global/);
+  assert.match(html, /Video Studio/);
+  assert.match(html, /dukjin-global-extension-v0\.3\.0\.zip/);
+  assert.match(html, /chrome:\/\/extensions/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });
 
-test("ships trustworthy source labels and social metadata", async () => {
+test("publishes auditable status labels and corpus data", async () => {
   const response = await render();
   const html = await response.text();
-  assert.match(html, /AI 분석 시드/);
-  assert.match(html, /타임스탬프 검수 예정/);
+  assert.match(html, /자막 확보/);
+  assert.match(html, /제목·순서 기반 후보이며 확정 답변이 아님/);
+  assert.match(html, /0 \/ 69/);
+  assert.match(html, /사람 검수/);
+  assert.match(html, /\/data\/episodes\.json/);
   assert.match(html, /property="og:image"/);
-  assert.match(html, /\/og\.png/);
+
+  const corpus = JSON.parse(await readFile(new URL("../public/data/episodes.json", import.meta.url), "utf8"));
+  assert.equal(corpus.totals.episodes, 69);
+  assert.equal(corpus.totals.transcriptsCaptured, 69);
+  assert.equal(corpus.episodes.length, 69);
+  assert.ok(corpus.episodes.every((episode) => episode.transcript.sha256 && episode.evidenceAnchor?.url));
+  assert.ok(corpus.episodes.every((episode) => !Object.hasOwn(episode.transcript, "text")));
 });

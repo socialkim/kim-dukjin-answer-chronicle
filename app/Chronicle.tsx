@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import corpus from "@/data/episodes.json";
 
 type Snapshot = {
   id: string;
@@ -186,14 +187,13 @@ const topics: Topic[] = [
 
 const categoryLabels = ["전체", "모델", "Google", "Anthropic", "중국 AI", "AI 경제", "에이전트", "일자리", "반도체", "피지컬 AI", "AI 안전"];
 
-const coverageMap = [
-  { label: "OpenAI · ChatGPT", count: 14, arc: "기대 → 실사용 → 비용 압박" },
-  { label: "Google · Gemini", count: 8, arc: "검색 → 유통 → 로봇 플랫폼" },
-  { label: "AI 인프라 경제", count: 7, arc: "증설 → 자금 압박 → 수익화" },
-  { label: "Hardware", count: 6, arc: "GPU → 메모리 → 자체칩" },
-  { label: "Physical AI", count: 5, arc: "기술 한계 → 양산 → 생태계" },
-  { label: "Anthropic · Claude", count: 4, arc: "성능 → 안전 → 파트너 갈등" },
-];
+const coverageMap = corpus.clusters.filter((cluster) => cluster.episodeCount > 0);
+
+function formatDuration(seconds: number) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  return hours ? `${hours}시간 ${minutes}분` : `${minutes}분`;
+}
 
 function ArrowIcon() {
   return <span aria-hidden="true">↗</span>;
@@ -207,6 +207,8 @@ export default function Chronicle() {
   const [selectedId, setSelectedId] = useState("o6");
   const [compareIds, setCompareIds] = useState<string[]>(["o2", "o6"]);
   const [compareOpen, setCompareOpen] = useState(false);
+  const [episodeQuery, setEpisodeQuery] = useState("");
+  const [episodeCluster, setEpisodeCluster] = useState("all");
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -220,6 +222,14 @@ export default function Chronicle() {
   const topic = topics.find((item) => item.id === topicId) ?? topics[0];
   const selected = topic.snapshots.find((item) => item.id === selectedId) ?? topic.snapshots.at(-1)!;
   const comparison = compareIds.map((id) => topic.snapshots.find((item) => item.id === id)).filter(Boolean) as Snapshot[];
+  const filteredEpisodes = useMemo(() => {
+    const needle = episodeQuery.trim().toLowerCase();
+    return corpus.episodes.filter((episode) => {
+      const clusterMatch = episodeCluster === "all" || episode.clusterId === episodeCluster;
+      const textMatch = !needle || `${episode.title} ${episode.thesisSeedKo} ${episode.clusterLabel}`.toLowerCase().includes(needle);
+      return clusterMatch && textMatch;
+    });
+  }, [episodeCluster, episodeQuery]);
 
   const chooseTopic = (next: Topic) => {
     setTopicId(next.id);
@@ -243,8 +253,9 @@ export default function Chronicle() {
         </a>
         <nav aria-label="주요 메뉴">
           <a className="nav-active" href="#chronicle">연대기</a>
+          <a href="#corpus">69편 전수조사</a>
           <a href="#topics">주제 탐색</a>
-          <a href="#global">English Companion</a>
+          <a href="#global">Video Studio</a>
         </nav>
         <div className="header-actions">
           <button className="language-toggle" onClick={() => setLanguage(isEnglish ? "ko" : "en")} aria-label="언어 전환">
@@ -256,7 +267,7 @@ export default function Chronicle() {
 
       <section className="hero" id="top">
         <div className="hero-grid" aria-hidden="true" />
-        <div className="eyebrow"><span /> 2025.07 — 2026.07 · 매주 업데이트</div>
+        <div className="eyebrow"><span /> 2025.01 — 2026.07 · 69편 전수 기록</div>
         <h1>{isEnglish ? <>Answers change.<br /><em>The record remains.</em></> : <>답은 바뀌었다.<br /><em>기록은 남는다.</em></>}</h1>
         <p>{isEnglish ? "Trace how Kim Dukjin's answers to the same AI questions evolved—week by week, with source videos." : "매주 달라지는 AI에 대한 김덕진의 답. 같은 질문에 대한 관점이 언제, 왜, 어떻게 바뀌었는지 원본 영상과 함께 추적합니다."}</p>
         <div className="search-shell" role="search">
@@ -265,10 +276,10 @@ export default function Chronicle() {
           <kbd>⌘ K</kbd>
         </div>
         <div className="hero-meta">
-          <div><strong>91</strong><span>PLAYLIST<br />VIDEOS</span></div>
+          <div><strong>92</strong><span>VISIBLE PLAYLIST<br />VIDEOS</span></div>
           <div><strong>69</strong><span>KIM DUKJIN<br />EPISODES</span></div>
           <div><strong>10</strong><span>EVOLVING<br />QUESTIONS</span></div>
-          <div className="method-note"><i /> AI 분석 시드 · 사람 검수 예정<br /><small>제목을 직접 발언으로 인용하지 않습니다.</small></div>
+          <div className="method-note"><i /> 69/69 한국어 자막 확보<br /><small>제목 기반 시드 · 사람 검수 전 단계</small></div>
         </div>
       </section>
 
@@ -295,12 +306,58 @@ export default function Chronicle() {
 
       <section className="coverage-section">
         <div className="section-heading">
-          <div><span className="section-no">MAP</span><h2>{isEnglish ? "One year of AI narratives" : "1년치 콘텐츠 지도"}</h2></div>
-          <p>49 EPISODES · 16H 57M · 43 ANSWER SNAPSHOTS</p>
+          <div><span className="section-no">MAP</span><h2>{isEnglish ? "A 69-episode AI narrative map" : "69편 전체 콘텐츠 지도"}</h2></div>
+          <p>69 EPISODES · 23H 33M · 69/69 TRANSCRIPTS</p>
         </div>
         <div className="coverage-grid">
-          {coverageMap.map((item, index) => <article key={item.label}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.label}</strong><b>{item.count}편</b><p>{item.arc}</p></article>)}
+          {coverageMap.map((item, index) => <article key={item.id}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.labelKo}</strong><b>{item.episodeCount}편</b><p>{item.questionKo}</p></article>)}
         </div>
+      </section>
+
+      <section className="corpus-section" id="corpus">
+        <div className="section-heading">
+          <div><span className="section-no">DATA</span><h2>{isEnglish ? "All 69 episodes, traceable" : "김덕진 에피소드 69편 전수조사"}</h2></div>
+          <p>{corpus.source.visiblePlaylistEntries} VISIBLE · {corpus.totals.episodes} SELECTED · {corpus.totals.transcriptsCaptured} CAPTURED</p>
+        </div>
+        <div className="corpus-intro">
+          <div>
+            <strong>누락 없이, 과장 없이</strong>
+            <p>플레이리스트의 주간 시리즈 구간에서 김덕진 출연분 69편을 확정하고 한국어 자동 자막을 모두 수집했습니다. 공개 데이터에는 원문 자막 대신 메타데이터, 커버리지, 해시와 근거 타임스탬프만 담았습니다.</p>
+          </div>
+          <div className="corpus-stats">
+            <span><b>69/69</b>에피소드</span>
+            <span><b>69/69</b>한국어 자막</span>
+            <span><b>{formatDuration(corpus.totals.durationSeconds)}</b>분석 분량</span>
+            <span><b>{corpus.totals.clusters}</b>질문 군집</span>
+          </div>
+        </div>
+        <div className="corpus-toolbar">
+          <label><span>에피소드 검색</span><input value={episodeQuery} onChange={(event) => setEpisodeQuery(event.target.value)} placeholder="제목·주제 검색" /></label>
+          <label><span>질문 군집</span><select value={episodeCluster} onChange={(event) => setEpisodeCluster(event.target.value)}><option value="all">전체 69편</option>{coverageMap.map((cluster) => <option key={cluster.id} value={cluster.id}>{cluster.labelKo} · {cluster.episodeCount}편</option>)}</select></label>
+          <a href="/data/episodes.json" target="_blank" rel="noreferrer">공개 코퍼스 JSON <ArrowIcon /></a>
+        </div>
+        <div className="episode-result"><b>{filteredEpisodes.length}</b>편 표시 중 <span>· 최신순</span></div>
+        <div className="episode-grid">
+          {filteredEpisodes.map((episode) => (
+            <article className="episode-card" key={episode.videoId}>
+              <a className="episode-thumb" href={episode.url} target="_blank" rel="noreferrer">
+                <img loading="lazy" src={`https://i.ytimg.com/vi/${episode.videoId}/mqdefault.jpg`} alt="" />
+                <span>{formatDuration(episode.durationSeconds)}</span>
+              </a>
+              <div className="episode-card-body">
+                <div className="episode-meta"><time>{episode.publishedAt}</time><b>{episode.clusterLabel}</b><small>#{episode.playlistPosition}</small></div>
+                <h3>{episode.title}</h3>
+                <p><span>논점 시드</span>{episode.thesisSeedKo}</p>
+                <div className="episode-proof">
+                  <span className="captured"><i /> 자막 {Math.round(episode.transcript.coverageRatio * 100)}%</span>
+                  {episode.evidenceAnchor ? <a href={episode.evidenceAnchor.url} target="_blank" rel="noreferrer">근거 시점 {Math.floor(episode.evidenceAnchor.startSeconds / 60)}:{String(episode.evidenceAnchor.startSeconds % 60).padStart(2, "0")} <ArrowIcon /></a> : <span>근거 시점 없음</span>}
+                </div>
+                <div className="review-strip"><span>분류 완료</span><span>델타 후보</span><span className="pending">사람 검수 대기</span></div>
+              </div>
+            </article>
+          ))}
+        </div>
+        {filteredEpisodes.length === 0 && <div className="empty-state">조건에 맞는 에피소드가 없습니다.</div>}
       </section>
 
       <section className="chronicle-section" id="chronicle">
@@ -371,33 +428,65 @@ export default function Chronicle() {
       <section className="global-section" id="global">
         <div className="global-copy">
           <span className="section-no">03</span>
-          <div className="product-chip">CHROME EXTENSION · MV3</div>
-          <h2>Dukjin Global<br /><em>English Companion</em></h2>
-          <p>한국어 방송을 보면서 영어 자막과 핵심 요약을 나란히. 개인정보를 밖으로 보내지 않는 Chrome 온디바이스 AI 경로와 제작자 검수 자막 카탈로그를 함께 설계했습니다.</p>
-          <ul><li><b>Live English subtitles</b><span>재생 시간에 맞춘 자막 오버레이</span></li><li><b>AI summary</b><span>TL;DR · 핵심 포인트 · 챕터</span></li><li><b>Source aware</b><span>제작자 자막 / 자동자막 / 데모 출처 표시</span></li></ul>
-          <a href="https://www.youtube.com/watch?v=YTfathQEoXc" target="_blank" rel="noreferrer" className="global-cta">확장 프로그램 데모 영상 <ArrowIcon /></a>
+          <div className="product-chip">CHROME EXTENSION · v0.3.0 BETA</div>
+          <h2>Dukjin Global<br /><em>Video Studio</em></h2>
+          <p>{isEnglish ? "Open a Korean YouTube video, choose a language, and turn the complete transcript into synchronized subtitles, a one-page infographic, or an evidence-linked report." : "한국어 유튜브 영상을 열고 언어만 고르면, 전체 전사를 동기화 자막·한 장짜리 인포그래픽·근거 링크가 담긴 보고서로 바꿉니다."}</p>
+          <ul>
+            <li><b>Multilingual subtitles</b><span>8개 언어 · 재생 시간 동기화</span></li>
+            <li><b>One-page infographic</b><span>정확 조판 PNG · GPT Image 2 선택</span></li>
+            <li><b>Editorial report</b><span>타임스탬프 근거 · Markdown · 인쇄용 HTML</span></li>
+            <li><b>Bring your own API</b><span>저비용 모델 선택 · 세션 키 또는 보안 프록시</span></li>
+          </ul>
+          <div className="global-actions">
+            <a href="https://github.com/socialkim/dukjin-global-english-companion/releases/download/v0.3.0-beta.1/dukjin-global-extension-v0.3.0.zip" className="global-cta">v0.3.0 ZIP 다운로드 <ArrowIcon /></a>
+            <a href="https://github.com/socialkim/dukjin-global-english-companion" target="_blank" rel="noreferrer" className="global-secondary">GitHub에서 보기</a>
+          </div>
         </div>
         <div className="extension-mock" aria-label="크롬 확장 프로그램 미리보기">
-          <div className="mock-browser"><span /><span /><span /><b>Dukjin Global</b><i>ON</i></div>
+          <div className="mock-browser"><span /><span /><span /><b>Dukjin Global · Video Studio</b><i>READY</i></div>
           <div className="mock-video">
             <img src="https://i.ytimg.com/vi/YTfathQEoXc/hqdefault.jpg" alt="GPT-5 영상 썸네일" />
-            <div className="subtitle"><small>ENGLISH · LIVE</small><strong>GPT-5 could mark the king&apos;s return.</strong></div>
+            <div className="subtitle"><small>ENGLISH · SYNCED</small><strong>Leadership now depends on cost, infrastructure and distribution.</strong></div>
           </div>
           <div className="mock-panel">
-            <div className="mock-tabs"><b>Summary</b><span>Transcript</span><span>Glossary</span></div>
-            <small>TL;DR</small>
-            <h3>OpenAI is preparing its next major model amid intensifying competition.</h3>
-            <div className="mock-point"><i>01</i><p>Leadership now depends on more than benchmark scores.</p><time>02:48</time></div>
-            <div className="mock-point"><i>02</i><p>Infrastructure and distribution are becoming decisive.</p><time>08:12</time></div>
-            <div className="mock-disclaimer">AI-generated · Verify names, numbers and product claims.</div>
+            <div className="mock-tabs"><span>Summary</span><span>Transcript</span><b>Studio</b><span>Settings</span></div>
+            <div className="mock-studio-head"><small>ONE-PAGE INFOGRAPHIC</small><b>ENGLISH</b></div>
+            <div className="mock-infographic">
+              <div><small>THE BIG PICTURE</small><strong>What changed in the AI race?</strong></div>
+              <div className="mock-facts"><span><b>01</b>Model quality</span><span><b>02</b>Infrastructure</span><span><b>03</b>Distribution</span></div>
+              <div className="mock-line"><i /><p>Expectation → real-world use → sustainable economics</p></div>
+            </div>
+            <div className="mock-export"><b>Download PNG</b><span>Report: MD · HTML</span></div>
+            <div className="mock-disclaimer">AI-generated · Every critical claim links back to the source timeline.</div>
           </div>
+        </div>
+        <div className="extension-guide">
+          <div className="extension-guide-copy"><span>INSTALLATION</span><h3>{isEnglish ? "From download to your first infographic" : "다운로드부터 첫 인포그래픽까지"}</h3><p>API 키는 ZIP에 포함되지 않습니다. 개인 테스트는 확장 프로그램에 세션 키를 입력하고, 공개 운영은 저장소의 보안 프록시를 사용하세요.</p></div>
+          <ol>
+            <li><b>01</b><span>ZIP 다운로드</span><small>압축을 원하는 폴더에 풉니다.</small></li>
+            <li><b>02</b><span>확장 관리 열기</span><small>Chrome 주소창에 chrome://extensions 입력</small></li>
+            <li><b>03</b><span>개발자 모드</span><small>오른쪽 위 개발자 모드를 켭니다.</small></li>
+            <li><b>04</b><span>폴더 불러오기</span><small>‘압축해제된 확장 프로그램을 로드’ 선택</small></li>
+            <li><b>05</b><span>영상 → 언어 → 생성</span><small>스크립트를 열고 Capture 후 결과를 만듭니다.</small></li>
+          </ol>
         </div>
       </section>
 
       <section className="method-section">
         <div><span className="section-no">04</span><h2>신뢰할 수 있는 연대기를 만드는 법</h2></div>
-        <div className="method-flow"><span><b>01</b>플레이리스트 수집</span><i>→</i><span><b>02</b>전사·화자 분리</span><i>→</i><span><b>03</b>질문 군집화</span><i>→</i><span><b>04</b>답변 델타 추출</span><i>→</i><span><b>05</b>사람 검수</span></div>
-        <p>AI 분석은 출발점이고, 원본 영상의 발언 구간과 검수 이력이 최종 근거입니다. 현재 화면은 실제 플레이리스트 메타데이터로 만든 제품 시드이며, 직접 발언 인용이 아닙니다.</p>
+        <div className="method-flow"><span><b>01</b>플레이리스트 확정</span><i>→</i><span><b>02</b>한국어 자막 수집</span><i>→</i><span><b>03</b>질문 군집화</span><i>→</i><span><b>04</b>답변 델타 후보</span><i>→</i><span><b>05</b>사람 검수</span></div>
+        <div className="method-dashboard">
+          <article className="done"><span>01</span><div><b>69 / 69</b><strong>출연분 확정</strong><small>공개 플레이리스트 92편 중 주간 김덕진 출연분</small></div></article>
+          <article className="done"><span>02</span><div><b>69 / 69</b><strong>자막 확보</strong><small>자동 자막 커버리지·SHA-256·근거 시점 기록</small></div></article>
+          <article className="done"><span>03</span><div><b>69 / 69</b><strong>질문 군집 시드</strong><small>12개 질문군 · 제목 키워드 기반 자동 분류</small></div></article>
+          <article className="review"><span>04</span><div><b>69 / 69</b><strong>델타 후보 생성</strong><small>제목·순서 기반 후보이며 확정 답변이 아님</small></div></article>
+          <article className="pending"><span>05</span><div><b>0 / 69</b><strong>사람 검수</strong><small>화자 분리·의미 요약·변화 판정은 검수 대기</small></div></article>
+        </div>
+        <div className="method-notes">
+          <p><b>완료된 것</b>69편 전체의 원본 URL, 게시일, 길이, 한국어 자막 존재 여부, 자막 해시, 질문군, 근거 타임스탬프를 재현 가능한 데이터로 만들었습니다.</p>
+          <p><b>아직 확정하지 않은 것</b>자동 자막에는 화자 분리가 없습니다. 그래서 카탈로그의 ‘논점 시드’와 ‘델타 후보’를 김덕진 소장의 직접 답변처럼 표시하지 않으며, 사람이 영상을 확인한 뒤에만 연대기 본문으로 승격합니다.</p>
+        </div>
+        <p className="method-footnote">재생성 명령: <code>python scripts/ingest_playlist.py</code> · 원문 자막은 저장소에 커밋하지 않음 · <a href="/data/episodes.json" target="_blank" rel="noreferrer">공개 데이터 확인</a></p>
       </section>
 
       <footer><div className="brand"><span className="brand-mark">答</span><span><b>김덕진 답변 연대기</b><small>ANSWER CHRONICLE</small></span></div><p>같은 질문, 달라진 답, 남아 있는 근거.</p><span>BUILT WITH CODEX · POWERED BY CHATGPT 5.6SOL</span></footer>
