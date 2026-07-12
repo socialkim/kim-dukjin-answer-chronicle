@@ -9,44 +9,35 @@ async function render() {
   return worker.fetch(new Request("http://localhost/", { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("server-renders the complete 69-episode answer chronicle", async () => {
+test("renders the V2 question intelligence service", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /김덕진 답변 연대기/);
-  assert.match(html, /V2 CURRENT/);
+  assert.match(html, /69편의 방송에서/);
+  assert.match(html, /60개의 질문/);
+  assert.match(html, /472/);
+  assert.match(html, /AI ANSWER INTELLIGENCE/);
+  assert.match(html, /\/og-corpus-69\.png/);
+  assert.match(html, /property="og:image"/);
+  assert.match(html, /\/og\.png/);
+  assert.equal((html.match(/class="question-row /g) ?? []).length, 60);
+  assert.equal((html.match(/aria-label="\d+번 /g) ?? []).length, 69);
+  assert.match(html, /69편이 만든/);
+  assert.match(html, /AI 지형도/);
   assert.match(html, /kim-dukjin-answer-chronicle-v1\.socialkim\.chatgpt\.site/);
-  assert.match(html, /답은 바뀌었다/);
-  assert.match(html, /69 EPISODES · 23H 33M · 69\/69 TRANSCRIPTS/);
-  assert.match(html, /김덕진 에피소드 69편 전수조사/);
-  assert.match(html, /69\/69.*한국어 자막/);
-  assert.match(html, /OpenAI·ChatGPT/);
-  assert.match(html, /Google·Gemini/);
-  assert.match(html, /Anthropic·Claude/);
-  assert.equal((html.match(/class="episode-card"/g) ?? []).length, 69);
-  assert.match(html, /POWERED BY CHATGPT 5\.6SOL/);
-  assert.match(html, /Dukjin Global/);
-  assert.match(html, /Video Studio/);
-  assert.match(html, /dukjin-global-extension-v0\.3\.0\.zip/);
-  assert.match(html, /chrome:\/\/extensions/);
-  assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
+  assert.doesNotMatch(html, /사람 검수 대기|신뢰할 수 있는 연대기를 만드는 법|method-dashboard|review-strip/);
 });
 
-test("publishes auditable status labels and corpus data", async () => {
-  const response = await render();
-  const html = await response.text();
-  assert.match(html, /자막 확보/);
-  assert.match(html, /제목·순서 기반 후보이며 확정 답변이 아님/);
-  assert.match(html, /0 \/ 69/);
-  assert.match(html, /사람 검수/);
-  assert.match(html, /\/data\/episodes\.json/);
-  assert.match(html, /property="og:image"/);
-
-  const corpus = JSON.parse(await readFile(new URL("../public/data/episodes.json", import.meta.url), "utf8"));
-  assert.equal(corpus.totals.episodes, 69);
-  assert.equal(corpus.totals.transcriptsCaptured, 69);
-  assert.equal(corpus.episodes.length, 69);
-  assert.ok(corpus.episodes.every((episode) => episode.transcript.sha256 && episode.evidenceAnchor?.url));
-  assert.ok(corpus.episodes.every((episode) => !Object.hasOwn(episode.transcript, "text")));
+test("publishes a many-to-many question atlas", async () => {
+  const atlas = JSON.parse(await readFile(new URL("../public/data/question-atlas.json", import.meta.url), "utf8"));
+  assert.equal(atlas.totals.questions, 60);
+  assert.equal(atlas.totals.episodes, 69);
+  assert.ok(atlas.totals.questionSeeds >= 400);
+  assert.ok(atlas.totals.minimumSeedsPerEpisode >= 4);
+  assert.equal(atlas.categories.length, 12);
+  assert.equal(atlas.questions.length, 60);
+  assert.equal(atlas.episodes.length, 69);
+  assert.ok(atlas.episodes.every((episode) => episode.questionSeeds.length >= 4));
+  assert.ok(atlas.questions.every((question) => question.signals.length >= 3));
 });
