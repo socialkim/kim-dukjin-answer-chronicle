@@ -1,0 +1,3003 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-12T13:23:22.896926+00:00",
+  "source": {
+    "playlistUrl": "https://www.youtube.com/playlist?list=PL-5ePmULnsmQidzPL5DTTh6YDInCYodV3",
+    "playlistId": "PL-5ePmULnsmQidzPL5DTTh6YDInCYodV3",
+    "visiblePlaylistEntries": 92,
+    "selectionRule": "주간 시리즈 구간(현재 플레이리스트 1-78번)에서 김덕진 출연분 69편을 선택. 김아람 편(8·26·43·61)과 과학 게스트 편(52-56)은 제외하며, 제목에 출연자 표기가 빠진 10번은 연속 편성 근거로 포함",
+    "expectedKimDukjinEpisodes": 69
+  },
+  "totals": {
+    "episodes": 69,
+    "durationSeconds": 84821,
+    "transcriptsCaptured": 69,
+    "clusters": 12,
+    "humanReviewed": 0
+  },
+  "method": {
+    "pipeline": [
+      "playlist inventory",
+      "Korean caption capture",
+      "title-keyword clustering",
+      "timestamp evidence anchor",
+      "semantic enrichment",
+      "human review"
+    ],
+    "completed": [
+      "playlist inventory",
+      "Korean caption capture",
+      "title-keyword clustering",
+      "timestamp evidence anchor"
+    ],
+    "pending": [
+      "semantic enrichment",
+      "human review"
+    ],
+    "limitationsKo": "자동 자막에는 화자 분리가 없으며, 현재 답변·변화 문장은 제목 기반 시드다. 의미 단위 요약과 변화 판정은 API 분석과 사람 검수 후 확정한다."
+  },
+  "clusters": [
+    {
+      "id": "openai",
+      "labelKo": "OpenAI·ChatGPT",
+      "questionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "episodeCount": 13
+    },
+    {
+      "id": "google",
+      "labelKo": "Google·Gemini",
+      "questionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "episodeCount": 7
+    },
+    {
+      "id": "anthropic",
+      "labelKo": "Anthropic·Claude",
+      "questionKo": "Claude는 어떤 방식으로 차별화되는가?",
+      "episodeCount": 2
+    },
+    {
+      "id": "china",
+      "labelKo": "중국 AI",
+      "questionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "episodeCount": 6
+    },
+    {
+      "id": "agents",
+      "labelKo": "AI 에이전트",
+      "questionKo": "AI 에이전트는 실제 업무를 어디까지 대신하는가?",
+      "episodeCount": 4
+    },
+    {
+      "id": "coding",
+      "labelKo": "AI 코딩",
+      "questionKo": "AI 코딩 도구는 개발 방식을 어떻게 바꾸는가?",
+      "episodeCount": 2
+    },
+    {
+      "id": "jobs",
+      "labelKo": "일자리·교육",
+      "questionKo": "AI 시대의 일자리와 교육은 어떻게 달라지는가?",
+      "episodeCount": 2
+    },
+    {
+      "id": "chips",
+      "labelKo": "반도체·인프라",
+      "questionKo": "AI 반도체와 인프라 경쟁의 핵심은 무엇인가?",
+      "episodeCount": 3
+    },
+    {
+      "id": "physical",
+      "labelKo": "로봇·Physical AI",
+      "questionKo": "AI가 현실 세계로 나오면 무엇이 달라지는가?",
+      "episodeCount": 2
+    },
+    {
+      "id": "media",
+      "labelKo": "콘텐츠·저작권",
+      "questionKo": "생성형 AI는 콘텐츠와 저작권을 어떻게 재편하는가?",
+      "episodeCount": 1
+    },
+    {
+      "id": "meta",
+      "labelKo": "Meta·오픈소스",
+      "questionKo": "오픈소스 AI 전략은 시장을 어떻게 바꾸는가?",
+      "episodeCount": 3
+    },
+    {
+      "id": "business",
+      "labelKo": "산업·비즈니스",
+      "questionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "episodeCount": 24
+    }
+  ],
+  "episodes": [
+    {
+      "videoId": "WVh7fRrLdqs",
+      "playlistPosition": 1,
+      "title": "클라우드 진출하는 메타의 진짜 속사정 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-07-06",
+      "durationSeconds": 1308,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=WVh7fRrLdqs",
+      "clusterId": "meta",
+      "clusterLabel": "Meta·오픈소스",
+      "canonicalQuestionKo": "오픈소스 AI 전략은 시장을 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "메타"
+      ],
+      "thesisSeedKo": "클라우드 진출하는 메타의 진짜 속사정",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 621,
+        "characterCount": 11819,
+        "coverageRatio": 0.998,
+        "sha256": "dc53bd129f511cb50d2fa056ae3730d86720723e5ed082f9b9527981f723be64",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 81,
+        "url": "https://www.youtube.com/watch?v=WVh7fRrLdqs&t=81s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "메타의"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "U5dxuUf7xns",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 클라우드 진출하는 메타의 진짜 속사정",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "7_23a6wSyws",
+      "playlistPosition": 2,
+      "title": "95점짜리 중국 AI, 비용은 6분의 1입니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-06-29",
+      "durationSeconds": 1184,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=7_23a6wSyws",
+      "clusterId": "china",
+      "clusterLabel": "중국 AI",
+      "canonicalQuestionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "중국"
+      ],
+      "thesisSeedKo": "95점짜리 중국 AI, 비용은 6분의 1입니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 555,
+        "characterCount": 10557,
+        "coverageRatio": 0.998,
+        "sha256": "9021559dbe48729fd89d6656caced8f82d4f321d38eaad6d1907713118ef94b7",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 30,
+        "url": "https://www.youtube.com/watch?v=7_23a6wSyws&t=30s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "중국"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 6,
+      "previousEpisodeId": "HfmEdYd3T58",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 95점짜리 중국 AI, 비용은 6분의 1입니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "6p6CRVhdaRo",
+      "playlistPosition": 3,
+      "title": "기업들이 AI 비용을 단속하기 시작했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-06-22",
+      "durationSeconds": 1201,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=6p6CRVhdaRo",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [
+        "기업"
+      ],
+      "thesisSeedKo": "기업들이 AI 비용을 단속하기 시작했습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 562,
+        "characterCount": 10676,
+        "coverageRatio": 0.998,
+        "sha256": "78903769d4b7d3e9986ade98db5d0c2e6492769d9e66d48eee53515abdf3f68b",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 12,
+        "url": "https://www.youtube.com/watch?v=6p6CRVhdaRo&t=12s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 24,
+      "previousEpisodeId": "ZMGTZAilZmQ",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 기업들이 AI 비용을 단속하기 시작했습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "XjjrDDt0FyQ",
+      "playlistPosition": 4,
+      "title": "아마존은 왜, 클로드의 뒤통수를 쳤나 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-06-15",
+      "durationSeconds": 1185,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=XjjrDDt0FyQ",
+      "clusterId": "anthropic",
+      "clusterLabel": "Anthropic·Claude",
+      "canonicalQuestionKo": "Claude는 어떤 방식으로 차별화되는가?",
+      "classificationKeywords": [
+        "클로드"
+      ],
+      "thesisSeedKo": "아마존은 왜, 클로드의 뒤통수를 쳤나",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 566,
+        "characterCount": 10655,
+        "coverageRatio": 0.998,
+        "sha256": "ea3595c00562743c5a9d494da0dca1d39ebffb0c27f3fa1ec91371e7858b0c8f",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 503,
+        "url": "https://www.youtube.com/watch?v=XjjrDDt0FyQ&t=503s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "아마존은"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "TNDllQfU8yQ",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 아마존은 왜, 클로드의 뒤통수를 쳤나",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "tYro7k3JBmQ",
+      "playlistPosition": 5,
+      "title": "젠슨황의 방한에 담긴 피지컬 AI 독식 플랜 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-06-08",
+      "durationSeconds": 1267,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=tYro7k3JBmQ",
+      "clusterId": "physical",
+      "clusterLabel": "로봇·Physical AI",
+      "canonicalQuestionKo": "AI가 현실 세계로 나오면 무엇이 달라지는가?",
+      "classificationKeywords": [
+        "피지컬"
+      ],
+      "thesisSeedKo": "젠슨황의 방한에 담긴 피지컬 AI 독식 플랜",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 602,
+        "characterCount": 11438,
+        "coverageRatio": 0.998,
+        "sha256": "38d22417d78d9dd969c0bdf6a76f4c34e4b16b3418186b8a8094a300d56f7cd1",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 48,
+        "url": "https://www.youtube.com/watch?v=tYro7k3JBmQ&t=48s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "피지컬"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "B8hpYECt1hY",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 젠슨황의 방한에 담긴 피지컬 AI 독식 플랜",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "ZMGTZAilZmQ",
+      "playlistPosition": 6,
+      "title": "이번주 젠슨황의 입에 AI의 미래가 달렸습니다  - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-06-01",
+      "durationSeconds": 1182,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=ZMGTZAilZmQ",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "이번주 젠슨황의 입에 AI의 미래가 달렸습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 571,
+        "characterCount": 10835,
+        "coverageRatio": 0.998,
+        "sha256": "d039eece4a70fc8b6176f1de2da4dc251e85a8936daf8d13f75be04cd6328061",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 913,
+        "url": "https://www.youtube.com/watch?v=ZMGTZAilZmQ&t=913s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "입에"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 23,
+      "previousEpisodeId": "1qVWgwizwfA",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 이번주 젠슨황의 입에 AI의 미래가 달렸습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "966q19887es",
+      "playlistPosition": 7,
+      "title": "구글이 모든 서비스를 집어삼키고 있습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-05-25",
+      "durationSeconds": 1201,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=966q19887es",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "구글"
+      ],
+      "thesisSeedKo": "구글이 모든 서비스를 집어삼키고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 635,
+        "characterCount": 10866,
+        "coverageRatio": 0.997,
+        "sha256": "6ee0f32895415ddea2093e80e4ec7ed4eca8c90426d78b158979bc42a03a1bdf",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1028,
+        "url": "https://www.youtube.com/watch?v=966q19887es&t=1028s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "모든"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 7,
+      "previousEpisodeId": "EQJ_Zq_YV6s",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 구글이 모든 서비스를 집어삼키고 있습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "1qVWgwizwfA",
+      "playlistPosition": 9,
+      "title": "마이크로소프트피셜, AI 시대에 살아남는 법 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-05-11",
+      "durationSeconds": 1142,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=1qVWgwizwfA",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [
+        "마이크로소프트"
+      ],
+      "thesisSeedKo": "마이크로소프트피셜, AI 시대에 살아남는 법",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 553,
+        "characterCount": 10325,
+        "coverageRatio": 0.997,
+        "sha256": "8cd48ecf1a816ebaae147a22b477891eb467185388b4de40567a7871c16b6806",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 896,
+        "url": "https://www.youtube.com/watch?v=1qVWgwizwfA&t=896s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 22,
+      "previousEpisodeId": "_lMm1HKYOnY",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 마이크로소프트피셜, AI 시대에 살아남는 법",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "_lMm1HKYOnY",
+      "playlistPosition": 10,
+      "title": "오픈AI 또 위기설, 1위가 위태롭습니다",
+      "publishedAt": "2026-05-04",
+      "durationSeconds": 1265,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=_lMm1HKYOnY",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "오픈AI 또 위기설, 1위가 위태롭습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 597,
+        "characterCount": 11049,
+        "coverageRatio": 0.998,
+        "sha256": "2837ccbd3d0922b2a0b669226c71c617b72ada6e994c54f06b3167d35d65f082",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 10,
+        "url": "https://www.youtube.com/watch?v=_lMm1HKYOnY&t=10s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "위기설"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 21,
+      "previousEpisodeId": "gXv3nPXn4B4",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 오픈AI 또 위기설, 1위가 위태롭습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "PVr9G2dAYls",
+      "playlistPosition": 11,
+      "title": "챗GPT 5.5 출시, AI판이 또 흔들립니다  - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-04-27",
+      "durationSeconds": 1403,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=PVr9G2dAYls",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT 5.5 출시, AI판이 또 흔들립니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 663,
+        "characterCount": 12558,
+        "coverageRatio": 0.998,
+        "sha256": "81eebb382eb6f28d3bdde87f3c351eb8fb5709fea8cc1949a9fa5a7d651b6a22",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 46,
+        "url": "https://www.youtube.com/watch?v=PVr9G2dAYls&t=46s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "출시"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 13,
+      "previousEpisodeId": "R4riEIHmbFk",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 챗GPT 5.5 출시, AI판이 또 흔들립니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "EQJ_Zq_YV6s",
+      "playlistPosition": 12,
+      "title": "구글의 '로봇 뇌'가 퀀텀점프했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-04-20",
+      "durationSeconds": 1352,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=EQJ_Zq_YV6s",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "구글"
+      ],
+      "thesisSeedKo": "구글의 '로봇 뇌'가 퀀텀점프했습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 646,
+        "characterCount": 12287,
+        "coverageRatio": 0.998,
+        "sha256": "34774eaff6773f04b7caa59a95c26aafbb77e73f2f080c657dc85dfd4cea3ebb",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 654,
+        "url": "https://www.youtube.com/watch?v=EQJ_Zq_YV6s&t=654s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "구글의"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 6,
+      "previousEpisodeId": "ARBkJ79gbG8",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 구글의 '로봇 뇌'가 퀀텀점프했습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "ARBkJ79gbG8",
+      "playlistPosition": 13,
+      "title": "구글이 모바일 AI, 싹쓸이에 나섰습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-04-13",
+      "durationSeconds": 1259,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=ARBkJ79gbG8",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "구글"
+      ],
+      "thesisSeedKo": "구글이 모바일 AI, 싹쓸이에 나섰습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 596,
+        "characterCount": 11129,
+        "coverageRatio": 0.998,
+        "sha256": "c8e4b972acfabb79cb1fb76c1cc4fab2e4a56aac229828678f04d99c450f08d5",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 402,
+        "url": "https://www.youtube.com/watch?v=ARBkJ79gbG8&t=402s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "구글이"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 5,
+      "previousEpisodeId": "nZxpLhN3zdk",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 구글이 모바일 AI, 싹쓸이에 나섰습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "gXv3nPXn4B4",
+      "playlistPosition": 14,
+      "title": "AI의 감정 신호가 포착됐습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-04-06",
+      "durationSeconds": 1317,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=gXv3nPXn4B4",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "AI의 감정 신호가 포착됐습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 614,
+        "characterCount": 11576,
+        "coverageRatio": 0.987,
+        "sha256": "0dc8ac0c1cf9d402f78a0e8627a5fa9c686bd6d8b495b9a832d591bf94c25890",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1250,
+        "url": "https://www.youtube.com/watch?v=gXv3nPXn4B4&t=1250s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai의",
+          "감정"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 20,
+      "previousEpisodeId": "hyTyvr9tBdc",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI의 감정 신호가 포착됐습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "R4riEIHmbFk",
+      "playlistPosition": 15,
+      "title": "소라 폐기한 오픈AI, 자금이 떨어졌나? - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-03-30",
+      "durationSeconds": 1316,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=R4riEIHmbFk",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "소라"
+      ],
+      "thesisSeedKo": "소라 폐기한 오픈AI, 자금이 떨어졌나?",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 511,
+        "characterCount": 9541,
+        "coverageRatio": 0.998,
+        "sha256": "528b15e96fa0d02f97e9a6623f7f12f7d74cd1005c5d004321cb7657f24d4cf0",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 13,
+        "url": "https://www.youtube.com/watch?v=R4riEIHmbFk&t=13s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "소라",
+          "오픈ai"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 12,
+      "previousEpisodeId": "Lqwae5zKwrA",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 소라 폐기한 오픈AI, 자금이 떨어졌나?",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "hyTyvr9tBdc",
+      "playlistPosition": 16,
+      "title": "마이크로소프트 끝났다? 머스크가 직격한 이유  - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-03-23",
+      "durationSeconds": 1275,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=hyTyvr9tBdc",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [
+        "마이크로소프트"
+      ],
+      "thesisSeedKo": "마이크로소프트 끝났다? 머스크가 직격한 이유",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 622,
+        "characterCount": 11746,
+        "coverageRatio": 0.998,
+        "sha256": "5179551364bc5566bb1b4ca56c08448a632aa733241e2ff58403de940de61979",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1180,
+        "url": "https://www.youtube.com/watch?v=hyTyvr9tBdc&t=1180s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "마이크로소프트"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 19,
+      "previousEpisodeId": "_TsBrgLGYN0",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 마이크로소프트 끝났다? 머스크가 직격한 이유",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "HfmEdYd3T58",
+      "playlistPosition": 17,
+      "title": "중국의 AI 확산, 속도가 미쳤습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-03-16",
+      "durationSeconds": 1293,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=HfmEdYd3T58",
+      "clusterId": "china",
+      "clusterLabel": "중국 AI",
+      "canonicalQuestionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "중국"
+      ],
+      "thesisSeedKo": "중국의 AI 확산, 속도가 미쳤습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 611,
+        "characterCount": 11494,
+        "coverageRatio": 0.998,
+        "sha256": "1425f8d00cc89096938503f9dc118661fb26a9f874e4be3247df27b72221af2d",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 695,
+        "url": "https://www.youtube.com/watch?v=HfmEdYd3T58&t=695s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 5,
+      "previousEpisodeId": "Z6r_H2hXFZc",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 중국의 AI 확산, 속도가 미쳤습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "_TsBrgLGYN0",
+      "playlistPosition": 18,
+      "title": "스마트폰의 시대가 흔들리고 있습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-03-09",
+      "durationSeconds": 1345,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=_TsBrgLGYN0",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "스마트폰의 시대가 흔들리고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 640,
+        "characterCount": 12147,
+        "coverageRatio": 0.998,
+        "sha256": "6491e536e66dabe7e95232700829117acce2575565b3ee36e6d71c7bed2ff48e",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 198,
+        "url": "https://www.youtube.com/watch?v=_TsBrgLGYN0&t=198s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "스마트폰의"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 18,
+      "previousEpisodeId": "_xYBQa2SU5A",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 스마트폰의 시대가 흔들리고 있습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "_xYBQa2SU5A",
+      "playlistPosition": 19,
+      "title": "앤스로픽은 뭘 믿고 미국 정부와 한판 붙나 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-03-02",
+      "durationSeconds": 1303,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=_xYBQa2SU5A",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "앤스로픽은 뭘 믿고 미국 정부와 한판 붙나",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 619,
+        "characterCount": 11572,
+        "coverageRatio": 0.998,
+        "sha256": "3b3b64b1809e38a94eee31abb447d0155c69a7dc31125a78a2fcaaa3cacbf0c6",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1202,
+        "url": "https://www.youtube.com/watch?v=_xYBQa2SU5A&t=1202s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "미국"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 17,
+      "previousEpisodeId": "isXh-4axOso",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 앤스로픽은 뭘 믿고 미국 정부와 한판 붙나",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "isXh-4axOso",
+      "playlistPosition": 20,
+      "title": "\"세상이 위험에 처했다\" 앤스로픽 연구원이 남긴 마지막 메시지 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-02-23",
+      "durationSeconds": 1302,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=isXh-4axOso",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "\"세상이 위험에 처했다\" 앤스로픽 연구원이 남긴 마지막 메시지",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 613,
+        "characterCount": 11418,
+        "coverageRatio": 0.998,
+        "sha256": "1983630c83f102f33ce523650a6f75bd494b0d18154bf1ea465a2a050d983c02",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1005,
+        "url": "https://www.youtube.com/watch?v=isXh-4axOso&t=1005s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "마지막"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 16,
+      "previousEpisodeId": "hzKNMCc1CsE",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: \"세상이 위험에 처했다\" 앤스로픽 연구원이 남긴 마지막 메시지",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "hzKNMCc1CsE",
+      "playlistPosition": 21,
+      "title": "AI 기업들의 총알이 떨어지고 있습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-02-15",
+      "durationSeconds": 1325,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=hzKNMCc1CsE",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [
+        "기업"
+      ],
+      "thesisSeedKo": "AI 기업들의 총알이 떨어지고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 640,
+        "characterCount": 11989,
+        "coverageRatio": 0.998,
+        "sha256": "dd907be6305c675070d8cc2a64e56b0ea7ba37f815357953729eb212d11d3c6d",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1311,
+        "url": "https://www.youtube.com/watch?v=hzKNMCc1CsE&t=1311s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 15,
+      "previousEpisodeId": "O5GdSXaaxwM",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI 기업들의 총알이 떨어지고 있습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "TNDllQfU8yQ",
+      "playlistPosition": 22,
+      "title": "클로드의 압도적 성능 비결이 밝혀졌습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-02-09",
+      "durationSeconds": 1275,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=TNDllQfU8yQ",
+      "clusterId": "anthropic",
+      "clusterLabel": "Anthropic·Claude",
+      "canonicalQuestionKo": "Claude는 어떤 방식으로 차별화되는가?",
+      "classificationKeywords": [
+        "클로드"
+      ],
+      "thesisSeedKo": "클로드의 압도적 성능 비결이 밝혀졌습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 639,
+        "characterCount": 11949,
+        "coverageRatio": 0.998,
+        "sha256": "44bdae1bc35fd6a0501a0144b0773098330b4811f4365b985d5751f3edd854dc",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 533,
+        "url": "https://www.youtube.com/watch?v=TNDllQfU8yQ&t=533s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "클로드의"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "O5GdSXaaxwM",
+      "playlistPosition": 23,
+      "title": "AI놈들이 인간을 따돌리기 시작했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-02-02",
+      "durationSeconds": 1274,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=O5GdSXaaxwM",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "AI놈들이 인간을 따돌리기 시작했습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 633,
+        "characterCount": 11963,
+        "coverageRatio": 0.998,
+        "sha256": "7c0c68481fb1ac5e3e8283f373e554595f4e043fb99259b9a146189ea0c8c793",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 10,
+        "url": "https://www.youtube.com/watch?v=O5GdSXaaxwM&t=10s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 14,
+      "previousEpisodeId": "hrQ1SnrKIyg",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI놈들이 인간을 따돌리기 시작했습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "Ca0DorKNZGs",
+      "playlistPosition": 24,
+      "title": "AI로 인한 일자리 감축 내년부터 본격화됩니다 - 김덕진 IT커뮤니케이션 연구소 소장",
+      "publishedAt": "2026-01-26",
+      "durationSeconds": 1283,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=Ca0DorKNZGs",
+      "clusterId": "jobs",
+      "clusterLabel": "일자리·교육",
+      "canonicalQuestionKo": "AI 시대의 일자리와 교육은 어떻게 달라지는가?",
+      "classificationKeywords": [
+        "일자리"
+      ],
+      "thesisSeedKo": "AI로 인한 일자리 감축 내년부터 본격화됩니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 602,
+        "characterCount": 11355,
+        "coverageRatio": 0.998,
+        "sha256": "09a8546874e6410cab8262e83f2fc4ff4e276aa166f7d0d0185224e8679c3987",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 526,
+        "url": "https://www.youtube.com/watch?v=Ca0DorKNZGs&t=526s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai로",
+          "인한"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "FPLpJoFYuow",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI로 인한 일자리 감축 내년부터 본격화됩니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "B8hpYECt1hY",
+      "playlistPosition": 25,
+      "title": "현대차의 휴머노이드 양산이 가능할까요? - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2026-01-19",
+      "durationSeconds": 1233,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=B8hpYECt1hY",
+      "clusterId": "physical",
+      "clusterLabel": "로봇·Physical AI",
+      "canonicalQuestionKo": "AI가 현실 세계로 나오면 무엇이 달라지는가?",
+      "classificationKeywords": [
+        "휴머노이드"
+      ],
+      "thesisSeedKo": "현대차의 휴머노이드 양산이 가능할까요? - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 593,
+        "characterCount": 11179,
+        "coverageRatio": 0.998,
+        "sha256": "403b72f5f24fbb49d5b78e9e34560ace3a615398642597c692f78005305fa1b2",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 177,
+        "url": "https://www.youtube.com/watch?v=B8hpYECt1hY&t=177s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "양산이"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "nZxpLhN3zdk",
+      "playlistPosition": 27,
+      "title": "엔비디아의 30조 베팅 구글은 야단났습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-12-29",
+      "durationSeconds": 1274,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=nZxpLhN3zdk",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "구글"
+      ],
+      "thesisSeedKo": "엔비디아의 30조 베팅 구글은 야단났습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 626,
+        "characterCount": 11680,
+        "coverageRatio": 0.998,
+        "sha256": "a57f318bdd608a70a8c07f64d7b93d4982a282ce8aef11e6937adc4a6e03c1ca",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 568,
+        "url": "https://www.youtube.com/watch?v=nZxpLhN3zdk&t=568s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "엔비디아의"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 4,
+      "previousEpisodeId": "m15sTGftSTY",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 엔비디아의 30조 베팅 구글은 야단났습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "C01VkFifysU",
+      "playlistPosition": 28,
+      "title": "엔비디아 독점 구도 또 다른 위협이 등장했다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-12-22",
+      "durationSeconds": 1373,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=C01VkFifysU",
+      "clusterId": "chips",
+      "clusterLabel": "반도체·인프라",
+      "canonicalQuestionKo": "AI 반도체와 인프라 경쟁의 핵심은 무엇인가?",
+      "classificationKeywords": [
+        "엔비디아"
+      ],
+      "thesisSeedKo": "엔비디아 독점 구도 또 다른 위협이 등장했다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 649,
+        "characterCount": 12069,
+        "coverageRatio": 0.998,
+        "sha256": "4fa10fb396f8148a7a59888696ff72cfe585ca116de78a18033a66a1bf25a12c",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1089,
+        "url": "https://www.youtube.com/watch?v=C01VkFifysU&t=1089s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "독점",
+          "엔비디아"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "9Jhpg-SHKW4",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 엔비디아 독점 구도 또 다른 위협이 등장했다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "m15sTGftSTY",
+      "playlistPosition": 29,
+      "title": "오픈AI가 반구글 연합을 꾸렸습니다  - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-12-15",
+      "durationSeconds": 1312,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=m15sTGftSTY",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "구글"
+      ],
+      "thesisSeedKo": "오픈AI가 반구글 연합을 꾸렸습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 632,
+        "characterCount": 11947,
+        "coverageRatio": 0.998,
+        "sha256": "a1512d6024ac76447887c31536f468d4d6604dac688297f919156b1166bcc705",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 55,
+        "url": "https://www.youtube.com/watch?v=m15sTGftSTY&t=55s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "r8V-FuDuT98",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 오픈AI가 반구글 연합을 꾸렸습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "Z6r_H2hXFZc",
+      "playlistPosition": 30,
+      "title": "미국 스타트업들은 요즘 중국AI 홀릭입니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-12-08",
+      "durationSeconds": 1291,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=Z6r_H2hXFZc",
+      "clusterId": "china",
+      "clusterLabel": "중국 AI",
+      "canonicalQuestionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "중국"
+      ],
+      "thesisSeedKo": "미국 스타트업들은 요즘 중국AI 홀릭입니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 616,
+        "characterCount": 11730,
+        "coverageRatio": 0.998,
+        "sha256": "0988afb7a7efaa0f8a89df9889c438ce04374a654299f09a565a913c73d2397f",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 159,
+        "url": "https://www.youtube.com/watch?v=Z6r_H2hXFZc&t=159s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "미국"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 4,
+      "previousEpisodeId": "cEYvxWoJmVs",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 미국 스타트업들은 요즘 중국AI 홀릭입니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "r8V-FuDuT98",
+      "playlistPosition": 31,
+      "title": "제미나이의 미친 성능 반도체가 더 필요합니다  - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-12-01",
+      "durationSeconds": 1270,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=r8V-FuDuT98",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "제미나이"
+      ],
+      "thesisSeedKo": "제미나이의 미친 성능 반도체가 더 필요합니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 631,
+        "characterCount": 11596,
+        "coverageRatio": 0.998,
+        "sha256": "4ecfea0ddc3115142231276143a09aaec80b3dd200ea6dee25c55bab1524aca2",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 158,
+        "url": "https://www.youtube.com/watch?v=r8V-FuDuT98&t=158s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "성능"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "3mUdm_fYSfM",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 제미나이의 미친 성능 반도체가 더 필요합니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "Lqwae5zKwrA",
+      "playlistPosition": 32,
+      "title": "챗GPT가 먹통이 된 이유 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-11-24",
+      "durationSeconds": 1226,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=Lqwae5zKwrA",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT가 먹통이 된 이유",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 575,
+        "characterCount": 10871,
+        "coverageRatio": 0.998,
+        "sha256": "88d563fcdc7fe748d869e72620eebfa31e020dfc87de471b005ef6c571b6d8ec",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 281,
+        "url": "https://www.youtube.com/watch?v=Lqwae5zKwrA&t=281s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "먹통이"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 11,
+      "previousEpisodeId": "WZsgOjrIaAE",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 챗GPT가 먹통이 된 이유",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "WZsgOjrIaAE",
+      "playlistPosition": 33,
+      "title": "챗GPT가 카톡을 위협하고 있습니다  - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-11-17",
+      "durationSeconds": 1195,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=WZsgOjrIaAE",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT가 카톡을 위협하고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 560,
+        "characterCount": 10415,
+        "coverageRatio": 0.998,
+        "sha256": "1142bcfec110a67252ba2ecefcce5ac8c0874c5cbb458c28b3c0e3b62be8aa11",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 843,
+        "url": "https://www.youtube.com/watch?v=WZsgOjrIaAE&t=843s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "있습니다"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 10,
+      "previousEpisodeId": "OsE-jHRaMyA",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 챗GPT가 카톡을 위협하고 있습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "OsE-jHRaMyA",
+      "playlistPosition": 34,
+      "title": "챗GPT 버린 애플 왜 제미나이를 택했나 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-11-10",
+      "durationSeconds": 1165,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=OsE-jHRaMyA",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT 버린 애플 왜 제미나이를 택했나",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 546,
+        "characterCount": 10237,
+        "coverageRatio": 0.998,
+        "sha256": "73d7445ddfd5865081c5514fedf554dab927ad10ffb25aebf930be16d3ccd2eb",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 599,
+        "url": "https://www.youtube.com/watch?v=OsE-jHRaMyA&t=599s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "애플"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 9,
+      "previousEpisodeId": "foXmmRnxFIg",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 챗GPT 버린 애플 왜 제미나이를 택했나",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "hrQ1SnrKIyg",
+      "playlistPosition": 35,
+      "title": "AI 전쟁의 승부처는 결국 메모리입니다 - 김덕진 소장(IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-10-27",
+      "durationSeconds": 1238,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=hrQ1SnrKIyg",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "AI 전쟁의 승부처는 결국 메모리입니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 581,
+        "characterCount": 10892,
+        "coverageRatio": 0.998,
+        "sha256": "da30e3de223e82ba6e24a3d9d9edb3601bbc92dc5543f397e029da9f168b0558",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 461,
+        "url": "https://www.youtube.com/watch?v=hrQ1SnrKIyg&t=461s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 13,
+      "previousEpisodeId": "gsPcsEnq2ew",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI 전쟁의 승부처는 결국 메모리입니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "foXmmRnxFIg",
+      "playlistPosition": 36,
+      "title": "챗GPT가 성인물 만든다? 정말 심각한 수준입니다 - 김덕진 소장(IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-10-20",
+      "durationSeconds": 1232,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=foXmmRnxFIg",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT가 성인물 만든다? 정말 심각한 수준입니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 586,
+        "characterCount": 11155,
+        "coverageRatio": 0.998,
+        "sha256": "6f497ee31a0b3fed10bd6574a5a5e769f3246521adeed3f450850a819e1fac95",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 5,
+        "url": "https://www.youtube.com/watch?v=foXmmRnxFIg&t=5s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "연구소"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 8,
+      "previousEpisodeId": "lv_ghGFnjWY",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 챗GPT가 성인물 만든다? 정말 심각한 수준입니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "lv_ghGFnjWY",
+      "playlistPosition": 37,
+      "title": "SNS부터 쇼핑까지 챗GPT가 폭주 중입니다 - 김덕진 소장(IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-10-13",
+      "durationSeconds": 1227,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=lv_ghGFnjWY",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "SNS부터 쇼핑까지 챗GPT가 폭주 중입니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 580,
+        "characterCount": 10789,
+        "coverageRatio": 0.998,
+        "sha256": "a03cec39afaca34868b062955a545d696ce3b6a2f8757c1d343d631e6ab9a8f6",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 424,
+        "url": "https://www.youtube.com/watch?v=lv_ghGFnjWY&t=424s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "쇼핑까지"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 7,
+      "previousEpisodeId": "UlqDIui5zM8",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: SNS부터 쇼핑까지 챗GPT가 폭주 중입니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "gsPcsEnq2ew",
+      "playlistPosition": 38,
+      "title": "카톡 업데이트 대참사? 의도는 이랬습니다 - 김덕진 소장(IT커뮤니케이션연구소)",
+      "publishedAt": "2025-09-29",
+      "durationSeconds": 1153,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=gsPcsEnq2ew",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "카톡 업데이트 대참사? 의도는 이랬습니다 - (IT커뮤니케이션연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 544,
+        "characterCount": 10322,
+        "coverageRatio": 0.989,
+        "sha256": "530d70e23827677c744f5a33d82ee5f6930b46f27c4d1cf560df181b1db15ee4",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1027,
+        "url": "https://www.youtube.com/watch?v=gsPcsEnq2ew&t=1027s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "카톡"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 12,
+      "previousEpisodeId": "YC6mNGtDFWE",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 카톡 업데이트 대참사? 의도는 이랬습니다 - (IT커뮤니케이션연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "3mUdm_fYSfM",
+      "playlistPosition": 39,
+      "title": "구글도 AI모드 도입, '제로클릭' 시대가 열렸습니다 - 김덕진 소장 (IT커뮤니케이션연구소)",
+      "publishedAt": "2025-09-22",
+      "durationSeconds": 1192,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=3mUdm_fYSfM",
+      "clusterId": "google",
+      "clusterLabel": "Google·Gemini",
+      "canonicalQuestionKo": "구글과 Gemini의 반격은 얼마나 강한가?",
+      "classificationKeywords": [
+        "구글"
+      ],
+      "thesisSeedKo": "구글도 AI모드 도입, '제로클릭' 시대가 열렸습니다 - (IT커뮤니케이션연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 568,
+        "characterCount": 10678,
+        "coverageRatio": 0.989,
+        "sha256": "967ff4f9f3c4229e5715c5d15d939187b8b996e85139ace95af333e82821f36f",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 354,
+        "url": "https://www.youtube.com/watch?v=3mUdm_fYSfM&t=354s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "구글도"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "YC6mNGtDFWE",
+      "playlistPosition": 40,
+      "title": "오픈AI는 왜 오라클을 선택했나 - 김덕진 소장 (IT커뮤니케이션연구소)",
+      "publishedAt": "2025-09-15",
+      "durationSeconds": 1188,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=YC6mNGtDFWE",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "오픈AI는 왜 오라클을 선택했나 - (IT커뮤니케이션연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 544,
+        "characterCount": 10249,
+        "coverageRatio": 0.989,
+        "sha256": "1d980f897fec52c1ceae00cb97f30c050623ddc197b5ff7f3d14d582db77c684",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 290,
+        "url": "https://www.youtube.com/watch?v=YC6mNGtDFWE&t=290s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "오라클을"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 11,
+      "previousEpisodeId": "rjYTxgVKHV0",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 오픈AI는 왜 오라클을 선택했나 - (IT커뮤니케이션연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "rjYTxgVKHV0",
+      "playlistPosition": 41,
+      "title": "궁극의 제조 AI, 아직 한참 남은 이유 - 김덕진 소장 (IT커뮤니케이션연구소)",
+      "publishedAt": "2025-09-08",
+      "durationSeconds": 1171,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=rjYTxgVKHV0",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "궁극의 제조 AI, 아직 한참 남은 이유 - (IT커뮤니케이션연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 540,
+        "characterCount": 10255,
+        "coverageRatio": 0.998,
+        "sha256": "ea572baa593b584f0f7a482bea035d90557eb11759b2b871b3ef00d25c053d67",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 598,
+        "url": "https://www.youtube.com/watch?v=rjYTxgVKHV0&t=598s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "제조"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 10,
+      "previousEpisodeId": "92GvonCGUS0",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 궁극의 제조 AI, 아직 한참 남은 이유 - (IT커뮤니케이션연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "6uhuNMgCmqU",
+      "playlistPosition": 42,
+      "title": "이미지 '참조'하는 인공지능, 디자인 업계에 혁명을 몰고올 겁니다 - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-09-01",
+      "durationSeconds": 1211,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=6uhuNMgCmqU",
+      "clusterId": "media",
+      "clusterLabel": "콘텐츠·저작권",
+      "canonicalQuestionKo": "생성형 AI는 콘텐츠와 저작권을 어떻게 재편하는가?",
+      "classificationKeywords": [
+        "이미지"
+      ],
+      "thesisSeedKo": "이미지 '참조'하는 인공지능, 디자인 업계에 혁명을 몰고올 겁니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 602,
+        "characterCount": 11226,
+        "coverageRatio": 0.998,
+        "sha256": "0e4a68995cb4dca218dff242e57eb5d906196b37c9c7aadd315fbbea520df43a",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1053,
+        "url": "https://www.youtube.com/watch?v=6uhuNMgCmqU&t=1053s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "겁니다",
+          "하는"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "92GvonCGUS0",
+      "playlistPosition": 44,
+      "title": "크롬을 삼키는 회사가 AI 시장의 승기를 잡을 겁니다 - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-08-18",
+      "durationSeconds": 1197,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=92GvonCGUS0",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "크롬을 삼키는 회사가 AI 시장의 승기를 잡을 겁니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 599,
+        "characterCount": 10660,
+        "coverageRatio": 0.998,
+        "sha256": "a8c0fd011d45db0fff177b141780f5776ee323071c7bc42233c26432f0f52dfd",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 303,
+        "url": "https://www.youtube.com/watch?v=92GvonCGUS0&t=303s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "회사가"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 9,
+      "previousEpisodeId": "7pNF_zKKld0",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 크롬을 삼키는 회사가 AI 시장의 승기를 잡을 겁니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "UlqDIui5zM8",
+      "playlistPosition": 45,
+      "title": "혁신 없다는 GPT5, 잘 쓰는 법 따로 있습니다 - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-08-11",
+      "durationSeconds": 1177,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=UlqDIui5zM8",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "gpt"
+      ],
+      "thesisSeedKo": "혁신 없다는 GPT5, 잘 쓰는 법 따로 있습니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 560,
+        "characterCount": 10508,
+        "coverageRatio": 0.997,
+        "sha256": "1dfa06af58adfb4a93da6b5f67e87113c649a963d2c05ec1b75cba1bef34f0ec",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 81,
+        "url": "https://www.youtube.com/watch?v=UlqDIui5zM8&t=81s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "gpt5"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 6,
+      "previousEpisodeId": "YTfathQEoXc",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 혁신 없다는 GPT5, 잘 쓰는 법 따로 있습니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "YTfathQEoXc",
+      "playlistPosition": 46,
+      "title": "GPT-5 출시 준비하는 오픈AI, 왕의 귀환이 임박했습니다- 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-08-04",
+      "durationSeconds": 1143,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=YTfathQEoXc",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "gpt"
+      ],
+      "thesisSeedKo": "GPT-5 출시 준비하는 오픈AI, 왕의 귀환이 임박했습니다- (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 537,
+        "characterCount": 10214,
+        "coverageRatio": 0.998,
+        "sha256": "7126ef91a905b4fbf22be8c03f186fdfbc343f0a6068917bc3572675982622f8",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 91,
+        "url": "https://www.youtube.com/watch?v=YTfathQEoXc&t=91s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "gpt"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 5,
+      "previousEpisodeId": "MVFUGY1QS9o",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: GPT-5 출시 준비하는 오픈AI, 왕의 귀환이 임박했습니다- (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "FPLpJoFYuow",
+      "playlistPosition": 47,
+      "title": "메타가 AI 인재를 싹쓸이하고 있습니다 - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-07-28",
+      "durationSeconds": 1227,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=FPLpJoFYuow",
+      "clusterId": "jobs",
+      "clusterLabel": "일자리·교육",
+      "canonicalQuestionKo": "AI 시대의 일자리와 교육은 어떻게 달라지는가?",
+      "classificationKeywords": [
+        "인재"
+      ],
+      "thesisSeedKo": "메타가 AI 인재를 싹쓸이하고 있습니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 595,
+        "characterCount": 11069,
+        "coverageRatio": 0.998,
+        "sha256": "dc430f689ae41bd9a62226d741b76ea171a3ce4fab8006905ae7d01a6d5300f2",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 240,
+        "url": "https://www.youtube.com/watch?v=FPLpJoFYuow&t=240s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "JjmRgfURH1Y",
+      "playlistPosition": 48,
+      "title": "오픈AI의 새 에이전트, 신박한데 많이 느립니다  - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-07-21",
+      "durationSeconds": 1174,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=JjmRgfURH1Y",
+      "clusterId": "agents",
+      "clusterLabel": "AI 에이전트",
+      "canonicalQuestionKo": "AI 에이전트는 실제 업무를 어디까지 대신하는가?",
+      "classificationKeywords": [
+        "에이전트"
+      ],
+      "thesisSeedKo": "오픈AI의 새 에이전트, 신박한데 많이 느립니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 539,
+        "characterCount": 10135,
+        "coverageRatio": 0.989,
+        "sha256": "14041f7db4bc2ce01c4930b8b9f5a8e39d305e555fcf720a283e47f1df6ff5db",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 27,
+        "url": "https://www.youtube.com/watch?v=JjmRgfURH1Y&t=27s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "많이"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 4,
+      "previousEpisodeId": "EZRDM0RUU8E",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 오픈AI의 새 에이전트, 신박한데 많이 느립니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "7pNF_zKKld0",
+      "playlistPosition": 49,
+      "title": "오픈AI가 휘청거리고 있습니다 - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-07-14",
+      "durationSeconds": 1209,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=7pNF_zKKld0",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "오픈AI가 휘청거리고 있습니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 574,
+        "characterCount": 10780,
+        "coverageRatio": 0.998,
+        "sha256": "505fb0306aa5821f475067c81a0ebf5531edde0646a45a66175a508d6b666e66",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 5,
+        "url": "https://www.youtube.com/watch?v=7pNF_zKKld0&t=5s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "연구소"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 8,
+      "previousEpisodeId": "7xDh7vQM730",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 오픈AI가 휘청거리고 있습니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "MVFUGY1QS9o",
+      "playlistPosition": 50,
+      "title": "아직도 챗GPT 쓰세요? 최고의 AI툴 이겁니다 - 김덕진 소장 (IT커뮤니케이션 연구소)",
+      "publishedAt": "2025-07-07",
+      "durationSeconds": 1247,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=MVFUGY1QS9o",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "아직도 챗GPT 쓰세요? 최고의 AI툴 이겁니다 - (IT커뮤니케이션 연구소)",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 582,
+        "characterCount": 11202,
+        "coverageRatio": 0.998,
+        "sha256": "84f76efd812bac0e4f8c4cb0130f3b2a4d16a997db2be498edb5a46170b6dbec",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 5,
+        "url": "https://www.youtube.com/watch?v=MVFUGY1QS9o&t=5s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "연구소"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 4,
+      "previousEpisodeId": "m8259Ani7lo",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 아직도 챗GPT 쓰세요? 최고의 AI툴 이겁니다 - (IT커뮤니케이션 연구소)",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "7xDh7vQM730",
+      "playlistPosition": 51,
+      "title": "마소 vs 오픈AI, 균열이 시작됐습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-06-30",
+      "durationSeconds": 1162,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=7xDh7vQM730",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [
+        "마소"
+      ],
+      "thesisSeedKo": "마소 vs 오픈AI, 균열이 시작됐습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 549,
+        "characterCount": 10458,
+        "coverageRatio": 0.998,
+        "sha256": "76d5d79b74ed607bc626a34186587935fb7f80b1e25e2e7f9803d424681a8b05",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 90,
+        "url": "https://www.youtube.com/watch?v=7xDh7vQM730&t=90s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "균열이"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 7,
+      "previousEpisodeId": "3N7iZehbuwU",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 마소 vs 오픈AI, 균열이 시작됐습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "3N7iZehbuwU",
+      "playlistPosition": 57,
+      "title": "단 한 사람이 만든 기업이 수조 원에 팔릴 겁니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-06-23",
+      "durationSeconds": 1275,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=3N7iZehbuwU",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [
+        "기업"
+      ],
+      "thesisSeedKo": "단 한 사람이 만든 기업이 수조 원에 팔릴 겁니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 579,
+        "characterCount": 11206,
+        "coverageRatio": 0.998,
+        "sha256": "a5bb7e1261f7bab63bb76becd54bf17c502a594d335d11ff6f69833af9225f48",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 111,
+        "url": "https://www.youtube.com/watch?v=3N7iZehbuwU&t=111s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "원에"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 6,
+      "previousEpisodeId": "ZMZcDnzzxT0",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 단 한 사람이 만든 기업이 수조 원에 팔릴 겁니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "U5dxuUf7xns",
+      "playlistPosition": 58,
+      "title": "메타가 초지능에 승부수를 던졌습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-06-16",
+      "durationSeconds": 1159,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=U5dxuUf7xns",
+      "clusterId": "meta",
+      "clusterLabel": "Meta·오픈소스",
+      "canonicalQuestionKo": "오픈소스 AI 전략은 시장을 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "메타"
+      ],
+      "thesisSeedKo": "메타가 초지능에 승부수를 던졌습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 541,
+        "characterCount": 10374,
+        "coverageRatio": 0.998,
+        "sha256": "1c010edd3117689ea8d7c99694815617d8d4d2c307c972e634822e770a57010e",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 22,
+        "url": "https://www.youtube.com/watch?v=U5dxuUf7xns&t=22s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "메타가"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "rJIgS_K5ams",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 메타가 초지능에 승부수를 던졌습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "ZMZcDnzzxT0",
+      "playlistPosition": 59,
+      "title": "전설의 벤처캐피탈리스트가 꼽은 AI 혁명의 진짜 수혜자 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-06-09",
+      "durationSeconds": 1160,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=ZMZcDnzzxT0",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "전설의 벤처캐피탈리스트가 꼽은 AI 혁명의 진짜 수혜자",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 524,
+        "characterCount": 10032,
+        "coverageRatio": 0.998,
+        "sha256": "55151fcf7a267f5f89e54b096de3ac362e697cae5ad1da7270fdd939ab8e2b00",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 75,
+        "url": "https://www.youtube.com/watch?v=ZMZcDnzzxT0&t=75s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 5,
+      "previousEpisodeId": "ha70K_i6GBI",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 전설의 벤처캐피탈리스트가 꼽은 AI 혁명의 진짜 수혜자",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "ha70K_i6GBI",
+      "playlistPosition": 60,
+      "title": "오픈AI 한국법인｜AI 활용 방식｜인간 협박하는 AI - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-06-02",
+      "durationSeconds": 1173,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=ha70K_i6GBI",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "오픈AI 한국법인",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 554,
+        "characterCount": 10681,
+        "coverageRatio": 0.997,
+        "sha256": "5884c1ec54088aaef1938b12630f2f65c45dd11d4ab1a6edbada41375af32fb0",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 12,
+        "url": "https://www.youtube.com/watch?v=ha70K_i6GBI&t=12s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 4,
+      "previousEpisodeId": "W5xf9VB8Ltk",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 오픈AI 한국법인",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "IKvPe7KQXzg",
+      "playlistPosition": 62,
+      "title": "고도화된 코딩 AI, 개발자를 몰아내고 있습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-05-19",
+      "durationSeconds": 1130,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=IKvPe7KQXzg",
+      "clusterId": "coding",
+      "clusterLabel": "AI 코딩",
+      "canonicalQuestionKo": "AI 코딩 도구는 개발 방식을 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "코딩",
+        "개발자"
+      ],
+      "thesisSeedKo": "고도화된 코딩 AI, 개발자를 몰아내고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 525,
+        "characterCount": 10062,
+        "coverageRatio": 0.997,
+        "sha256": "4ec03e6bc4104c9a8d84cd3d9ad2907c01a864228c9872a700f90efd35d94952",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 207,
+        "url": "https://www.youtube.com/watch?v=IKvPe7KQXzg&t=207s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "코딩"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "QWG499BvCbM",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 고도화된 코딩 AI, 개발자를 몰아내고 있습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "W5xf9VB8Ltk",
+      "playlistPosition": 63,
+      "title": "AI의 플러팅이 사람을 홀리고 있습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-05-12",
+      "durationSeconds": 1102,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=W5xf9VB8Ltk",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "AI의 플러팅이 사람을 홀리고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 500,
+        "characterCount": 9516,
+        "coverageRatio": 0.998,
+        "sha256": "58168a528607e4b42244807b3974fead82ade2d2032da14848ff4452d95cb8a8",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 633,
+        "url": "https://www.youtube.com/watch?v=W5xf9VB8Ltk&t=633s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "있습니다"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "jOCeP1HDHg0",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI의 플러팅이 사람을 홀리고 있습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "jOCeP1HDHg0",
+      "playlistPosition": 64,
+      "title": "AI 시대 최고의 역량, 회복탄력성입니다  - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-05-05",
+      "durationSeconds": 1204,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=jOCeP1HDHg0",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "AI 시대 최고의 역량, 회복탄력성입니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 545,
+        "characterCount": 10369,
+        "coverageRatio": 0.998,
+        "sha256": "df6cf117bccc3cdee736fa2e1c9d6e2e1e0999431cde8c40b5ea047c499244f9",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 288,
+        "url": "https://www.youtube.com/watch?v=jOCeP1HDHg0&t=288s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "YTOh-DSShag",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI 시대 최고의 역량, 회복탄력성입니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "m8259Ani7lo",
+      "playlistPosition": 65,
+      "title": "챗GPT가 출시한 최신 모델, 헛소리가 3배나 늘었습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-04-28",
+      "durationSeconds": 1186,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=m8259Ani7lo",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT가 출시한 최신 모델, 헛소리가 3배나 늘었습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 545,
+        "characterCount": 10480,
+        "coverageRatio": 0.998,
+        "sha256": "d00c8632cc326a7b39ff723aed0acf7b4ab17229118678b086a7f9c241c71823",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 58,
+        "url": "https://www.youtube.com/watch?v=m8259Ani7lo&t=58s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "모델"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "3RrmMxHA7GQ",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 챗GPT가 출시한 최신 모델, 헛소리가 3배나 늘었습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "QWG499BvCbM",
+      "playlistPosition": 66,
+      "title": "느낌만으로 개발하는 AI코딩의 시대가 왔습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-04-21",
+      "durationSeconds": 1315,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=QWG499BvCbM",
+      "clusterId": "coding",
+      "clusterLabel": "AI 코딩",
+      "canonicalQuestionKo": "AI 코딩 도구는 개발 방식을 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "코딩"
+      ],
+      "thesisSeedKo": "느낌만으로 개발하는 AI코딩의 시대가 왔습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 595,
+        "characterCount": 11422,
+        "coverageRatio": 0.998,
+        "sha256": "f42a09bf7a1230805edd1e028d79e2d348abad13896b8579d091235796e64a21",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 1075,
+        "url": "https://www.youtube.com/watch?v=QWG499BvCbM&t=1075s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "시대가"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "9Jhpg-SHKW4",
+      "playlistPosition": 67,
+      "title": "미친 성능의 구글 AI칩, 엔비디아 아성을 흔듭니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-04-14",
+      "durationSeconds": 1164,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=9Jhpg-SHKW4",
+      "clusterId": "chips",
+      "clusterLabel": "반도체·인프라",
+      "canonicalQuestionKo": "AI 반도체와 인프라 경쟁의 핵심은 무엇인가?",
+      "classificationKeywords": [
+        "엔비디아",
+        "칩"
+      ],
+      "thesisSeedKo": "미친 성능의 구글 AI칩, 엔비디아 아성을 흔듭니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 539,
+        "characterCount": 10307,
+        "coverageRatio": 0.998,
+        "sha256": "a904594e8c130e74f6896a906c89d833446656bd0f05a9dc805c43b552824066",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 436,
+        "url": "https://www.youtube.com/watch?v=9Jhpg-SHKW4&t=436s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "구글"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "lcDTz4k-mSk",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 미친 성능의 구글 AI칩, 엔비디아 아성을 흔듭니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "EZRDM0RUU8E",
+      "playlistPosition": 68,
+      "title": "온갖 AI 하나로 묶는 MCP, 이게 진짜 생산성 혁명입니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-04-07",
+      "durationSeconds": 1170,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=EZRDM0RUU8E",
+      "clusterId": "agents",
+      "clusterLabel": "AI 에이전트",
+      "canonicalQuestionKo": "AI 에이전트는 실제 업무를 어디까지 대신하는가?",
+      "classificationKeywords": [
+        "mcp"
+      ],
+      "thesisSeedKo": "온갖 AI 하나로 묶는 MCP, 이게 진짜 생산성 혁명입니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 533,
+        "characterCount": 10259,
+        "coverageRatio": 0.998,
+        "sha256": "ab8e54804470f66e3cd622a9a1c01e1bf70e91bd5628d89c91bcd272c960f484",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 759,
+        "url": "https://www.youtube.com/watch?v=EZRDM0RUU8E&t=759s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai",
+          "이게"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "U1TEe33spkg",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 온갖 AI 하나로 묶는 MCP, 이게 진짜 생산성 혁명입니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "3RrmMxHA7GQ",
+      "playlistPosition": 69,
+      "title": "진화한 챗GPT 이미지, 디자이너들 큰일났습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-03-31",
+      "durationSeconds": 1205,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=3RrmMxHA7GQ",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "진화한 챗GPT 이미지, 디자이너들 큰일났습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 561,
+        "characterCount": 10745,
+        "coverageRatio": 0.998,
+        "sha256": "7946e086d4f0d5ca3a993922cce4e9bd7048368cd28326a070297eb6905c2091",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 50,
+        "url": "https://www.youtube.com/watch?v=3RrmMxHA7GQ&t=50s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "이미지"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "XsSvngBWeC8",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 진화한 챗GPT 이미지, 디자이너들 큰일났습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "U1TEe33spkg",
+      "playlistPosition": 70,
+      "title": "AI 에이전트에 달린 엔비디아의 운명 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-03-24",
+      "durationSeconds": 1206,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=U1TEe33spkg",
+      "clusterId": "agents",
+      "clusterLabel": "AI 에이전트",
+      "canonicalQuestionKo": "AI 에이전트는 실제 업무를 어디까지 대신하는가?",
+      "classificationKeywords": [
+        "에이전트"
+      ],
+      "thesisSeedKo": "AI 에이전트에 달린 엔비디아의 운명",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 525,
+        "characterCount": 10150,
+        "coverageRatio": 0.997,
+        "sha256": "2db436e5c306055b185316e8d672981f6a4f8c476556c2d268904367dec043a2",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 270,
+        "url": "https://www.youtube.com/watch?v=U1TEe33spkg&t=270s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "_zlbeXPMh1w",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: AI 에이전트에 달린 엔비디아의 운명",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "_zlbeXPMh1w",
+      "playlistPosition": 71,
+      "title": "대륙이 낳은 AI 에이전트, 마누스의 충격적인 실체 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-03-17",
+      "durationSeconds": 1162,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=_zlbeXPMh1w",
+      "clusterId": "agents",
+      "clusterLabel": "AI 에이전트",
+      "canonicalQuestionKo": "AI 에이전트는 실제 업무를 어디까지 대신하는가?",
+      "classificationKeywords": [
+        "에이전트"
+      ],
+      "thesisSeedKo": "대륙이 낳은 AI 에이전트, 마누스의 충격적인 실체",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 519,
+        "characterCount": 9950,
+        "coverageRatio": 0.998,
+        "sha256": "9b07fc83f2182e5555f304eb1755644abdb0d67f67554f2cc6bf9e90ecce8844",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 265,
+        "url": "https://www.youtube.com/watch?v=_zlbeXPMh1w&t=265s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "ai"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "cEYvxWoJmVs",
+      "playlistPosition": 72,
+      "title": "이번 MWC의 주인공은 단연 중국IT기업들이었습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-03-10",
+      "durationSeconds": 1247,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=cEYvxWoJmVs",
+      "clusterId": "china",
+      "clusterLabel": "중국 AI",
+      "canonicalQuestionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "중국"
+      ],
+      "thesisSeedKo": "이번 MWC의 주인공은 단연 중국IT기업들이었습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 531,
+        "characterCount": 10122,
+        "coverageRatio": 0.998,
+        "sha256": "2d727522a4039fbbc91d4268845d91ffb5a9b052dd45892475ca595520b3fa3b",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 433,
+        "url": "https://www.youtube.com/watch?v=cEYvxWoJmVs&t=433s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "이번"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 3,
+      "previousEpisodeId": "EZUxX4bpXb4",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 이번 MWC의 주인공은 단연 중국IT기업들이었습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "rJIgS_K5ams",
+      "playlistPosition": 73,
+      "title": "AI전쟁의 진짜 승자, 메타일지도 모릅니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-03-03",
+      "durationSeconds": 1221,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=rJIgS_K5ams",
+      "clusterId": "meta",
+      "clusterLabel": "Meta·오픈소스",
+      "canonicalQuestionKo": "오픈소스 AI 전략은 시장을 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "메타"
+      ],
+      "thesisSeedKo": "AI전쟁의 진짜 승자, 메타일지도 모릅니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 542,
+        "characterCount": 10412,
+        "coverageRatio": 0.998,
+        "sha256": "d109312b5f46651dfd51ae4bd2fc81e7be65cdcb2d12e319a66350fb521585dc",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 24,
+        "url": "https://www.youtube.com/watch?v=rJIgS_K5ams&t=24s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "YTOh-DSShag",
+      "playlistPosition": 74,
+      "title": "AI가 사람의 지능을 떨어뜨리고 있습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-02-17",
+      "durationSeconds": 1174,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=YTOh-DSShag",
+      "clusterId": "business",
+      "clusterLabel": "산업·비즈니스",
+      "canonicalQuestionKo": "기업과 산업은 AI를 어떻게 실제 가치로 연결하는가?",
+      "classificationKeywords": [],
+      "thesisSeedKo": "AI가 사람의 지능을 떨어뜨리고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 516,
+        "characterCount": 9954,
+        "coverageRatio": 0.998,
+        "sha256": "6fd924c2e67b95ec726ed0c2b59dcac6c8c992f949a1cce8f54510f313bc6daf",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 282,
+        "url": "https://www.youtube.com/watch?v=YTOh-DSShag&t=282s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "있습니다"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "XsSvngBWeC8",
+      "playlistPosition": 75,
+      "title": "챗GPT의 딥리서치, 전문직의 시대도 끝났습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-02-10",
+      "durationSeconds": 1187,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=XsSvngBWeC8",
+      "clusterId": "openai",
+      "clusterLabel": "OpenAI·ChatGPT",
+      "canonicalQuestionKo": "OpenAI와 ChatGPT는 어디로 진화하는가?",
+      "classificationKeywords": [
+        "챗gpt",
+        "챗GPT",
+        "gpt"
+      ],
+      "thesisSeedKo": "챗GPT의 딥리서치, 전문직의 시대도 끝났습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 516,
+        "characterCount": 9914,
+        "coverageRatio": 0.977,
+        "sha256": "e0f30973d9e96d1f834e641f7b7e0daf04c1a6dcc7d3be32b789ff548333d42f",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 13,
+        "url": "https://www.youtube.com/watch?v=XsSvngBWeC8&t=13s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "EZUxX4bpXb4",
+      "playlistPosition": 76,
+      "title": "딥시크 충격으로 AI판의 경쟁 구도가 확 바뀌었습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-02-03",
+      "durationSeconds": 1211,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=EZUxX4bpXb4",
+      "clusterId": "china",
+      "clusterLabel": "중국 AI",
+      "canonicalQuestionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "딥시크"
+      ],
+      "thesisSeedKo": "딥시크 충격으로 AI판의 경쟁 구도가 확 바뀌었습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 527,
+        "characterCount": 10242,
+        "coverageRatio": 0.998,
+        "sha256": "02ccbb31d729370a2886a1504289ebe83628857b1b7dc053c7b065b8705feff7",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 673,
+        "url": "https://www.youtube.com/watch?v=EZUxX4bpXb4&t=673s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "경쟁",
+          "딥시크"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 2,
+      "previousEpisodeId": "II78dEpFlr4",
+      "deltaSeedKo": "이전 편 이후 제목·핵심 의제의 변화 후보: 딥시크 충격으로 AI판의 경쟁 구도가 확 바뀌었습니다",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "II78dEpFlr4",
+      "playlistPosition": 77,
+      "title": "중국 스타트업이 AI 세계의 판을 뒤집어놨습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-01-27",
+      "durationSeconds": 1204,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=II78dEpFlr4",
+      "clusterId": "china",
+      "clusterLabel": "중국 AI",
+      "canonicalQuestionKo": "중국 AI는 세계 경쟁 구도를 어떻게 바꾸는가?",
+      "classificationKeywords": [
+        "중국"
+      ],
+      "thesisSeedKo": "중국 스타트업이 AI 세계의 판을 뒤집어놨습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 518,
+        "characterCount": 9995,
+        "coverageRatio": 0.998,
+        "sha256": "f82eaf60435cf91a9b4ca710be3706e85894da8b1a8799be969a8066d8a708ab",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 30,
+        "url": "https://www.youtube.com/watch?v=II78dEpFlr4&t=30s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "스타트업이",
+          "중국"
+        ],
+        "confidence": "medium"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    },
+    {
+      "videoId": "lcDTz4k-mSk",
+      "playlistPosition": 78,
+      "title": "엔비디아가 플랫폼 회사로 거듭나고 있습니다 - 김덕진 IT커뮤니케이션연구소장",
+      "publishedAt": "2025-01-20",
+      "durationSeconds": 1222,
+      "channel": "손에잡히는경제",
+      "url": "https://www.youtube.com/watch?v=lcDTz4k-mSk",
+      "clusterId": "chips",
+      "clusterLabel": "반도체·인프라",
+      "canonicalQuestionKo": "AI 반도체와 인프라 경쟁의 핵심은 무엇인가?",
+      "classificationKeywords": [
+        "엔비디아"
+      ],
+      "thesisSeedKo": "엔비디아가 플랫폼 회사로 거듭나고 있습니다",
+      "answerStatus": "제목 기반 시드 · 의미 분석 및 사람 검수 대기",
+      "transcript": {
+        "available": true,
+        "source": "automatic",
+        "language": "ko-orig",
+        "cueCount": 546,
+        "characterCount": 10490,
+        "coverageRatio": 0.998,
+        "sha256": "7df87b454a4fde86a449f0b4f772993d6f76cf1d436e41f69e68c9967251bb98",
+        "speakerSeparation": "unavailable"
+      },
+      "evidenceAnchor": {
+        "startSeconds": 87,
+        "url": "https://www.youtube.com/watch?v=lcDTz4k-mSk&t=87s",
+        "method": "title-keyword overlap over Korean caption cues",
+        "matchedKeywords": [
+          "엔비디아가"
+        ],
+        "confidence": "low"
+      },
+      "reviewStatus": "pending",
+      "copyright": "원문 자막은 로컬 캐시에만 보관하며 공개 JSON에는 게시하지 않음",
+      "clusterSequence": 1,
+      "previousEpisodeId": null,
+      "deltaSeedKo": "최초 관찰 지점",
+      "deltaStatus": "evidence review required"
+    }
+  ]
+}
