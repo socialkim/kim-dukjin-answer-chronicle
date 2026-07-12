@@ -31,8 +31,14 @@ test("renders the V4 question-to-chronicle service", async () => {
   assert.match(html, /kim-dukjin-answer-chronicle-v1\.socialkim\.chatgpt\.site/);
   assert.match(html, /kim-dukjin-answer-chronicle-v2\.socialkim\.chatgpt\.site/);
   assert.match(html, /kim-dukjin-answer-chronicle-v3\.socialkim\.chatgpt\.site/);
-  assert.match(html, /현재 종합 답/);
+  assert.match(html, /현재 종합 관점/);
   assert.match(html, /직전 답변과 달라진 점/);
+  assert.match(html, /무엇이 달라졌나/);
+  assert.match(html, /69편의 방송 논점을 질문 단위로 연결한 편집 요약이며, 직접 인용이 아닙니다/);
+  assert.match(html, /최초 ↔ 최신 두 시점 비교/);
+  const renderedAtlas = JSON.parse(await readFile(new URL("../public/data/question-atlas.json", import.meta.url), "utf8"));
+  assert.equal((html.match(/timeline-entry/g) ?? []).length, renderedAtlas.questions[0].signals.length);
+  assert.equal(renderedAtlas.questions[0].signals.length, renderedAtlas.questions[0].episodeCount);
   assert.match(html, /김덕진 에피소드 69편 전수조사/);
   assert.ok(html.indexOf('id="questions"') < html.indexOf('id="chronicle"'));
   assert.ok(html.indexOf('id="chronicle"') < html.indexOf('id="map"'));

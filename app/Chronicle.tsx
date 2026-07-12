@@ -36,13 +36,6 @@ function changeLevel(question: Question) {
   return "추적";
 }
 
-function timelineSignals(question: Question) {
-  const signals = question.signals;
-  if (signals.length <= 3) return signals;
-  const indices = [0, .5, 1].map((ratio) => Math.round((signals.length - 1) * ratio));
-  return Array.from(new Set(indices)).map((index) => signals[index]);
-}
-
 export default function Chronicle() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("전체");
@@ -52,6 +45,7 @@ export default function Chronicle() {
   const [showAllQuestions, setShowAllQuestions] = useState(false);
   const [episodeQuery, setEpisodeQuery] = useState("");
   const [episodeCluster, setEpisodeCluster] = useState("all");
+  const [compareOpen, setCompareOpen] = useState(false);
 
   const categories = ["전체", ...atlas.categories.map((item) => item.labelKo)];
   const filteredQuestions = useMemo(() => {
@@ -66,8 +60,10 @@ export default function Chronicle() {
 
   const selectedQuestion = atlas.questions.find((question) => question.id === selectedQuestionId) ?? filteredQuestions[0] ?? atlas.questions[0];
   const selectedEpisode = atlas.episodes.find((episode) => episode.videoId === selectedEpisodeId) ?? atlas.episodes[0];
-  const selectedTimeline = timelineSignals(selectedQuestion);
+  const selectedTimeline = selectedQuestion.signals;
   const selectedSignal = selectedTimeline.find((signal) => signal.videoId === selectedSignalId) ?? selectedTimeline.at(-1) ?? selectedQuestion.signals.at(-1)!;
+  const firstSignal = selectedTimeline[0];
+  const latestSignal = selectedTimeline.at(-1)!;
   const displayQuestions = showAllQuestions || query.trim() || category !== "전체" ? filteredQuestions : filteredQuestions.slice(0, 12);
   const filteredEpisodes = useMemo(() => {
     const needle = episodeQuery.trim().toLowerCase();
@@ -80,7 +76,7 @@ export default function Chronicle() {
 
   const selectQuestion = (question: Question) => {
     setSelectedQuestionId(question.id);
-    setSelectedSignalId(timelineSignals(question).at(-1)?.videoId ?? question.signals.at(-1)!.videoId);
+    setSelectedSignalId(question.signals.at(-1)!.videoId);
     requestAnimationFrame(() => document.getElementById("chronicle")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
 
@@ -89,7 +85,7 @@ export default function Chronicle() {
     setQuery("");
     setSelectedQuestionId(questionId);
     const question = atlas.questions.find((item) => item.id === questionId);
-    if (question) setSelectedSignalId(timelineSignals(question).at(-1)?.videoId ?? question.signals.at(-1)!.videoId);
+    if (question) setSelectedSignalId(question.signals.at(-1)!.videoId);
     document.getElementById("chronicle")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -165,7 +161,7 @@ export default function Chronicle() {
                 <span className={`v2-change-badge change-${level}`}>변화 {level}</span>
                 <strong>{question.questionKo}</strong>
                 <p>{question.synthesisKo.split(". ")[0]}.</p>
-                <span className="v2-topic-bottom"><span>{question.category} · 답변 {timelineSignals(question).length}개 · 근거 {question.episodeCount}편</span><b>→</b></span>
+                <span className="v2-topic-bottom"><span>{question.category} · 답변 {question.signals.length}개 · 근거 {question.episodeCount}편</span><b>→</b></span>
               </button>
             );
           })}
@@ -181,17 +177,19 @@ export default function Chronicle() {
         </div>
         <div className="chronicle-question-header">
           <div><span>{selectedQuestion.category} · {selectedQuestion.firstObservedAt.slice(0, 7)} — {selectedQuestion.lastObservedAt.slice(0, 7)}</span><h3>{selectedQuestion.questionKo}</h3></div>
-          <b>{selectedQuestion.episodeCount}개 근거 방송</b>
+          <div className="chronicle-header-actions"><b>{selectedQuestion.episodeCount}개 근거 방송</b><button onClick={() => setCompareOpen(true)}><span>⇄</span> 최초 ↔ 최신 두 시점 비교</button></div>
         </div>
         <div className="chronicle-current-answer">
-          <span>NOW<br /><b>현재 종합 답</b></span>
+          <span>NOW<br /><b>현재 종합 관점</b></span>
           <p>{selectedQuestion.synthesisKo}</p>
           <div><small>변화 강도</small><i /><i /><i className={changeLevel(selectedQuestion) === "추적" ? "dim" : ""} /><b>{changeLevel(selectedQuestion)}</b></div>
         </div>
+        <p className="chronicle-editorial-note">*69편의 방송 논점을 질문 단위로 연결한 편집 요약이며, 직접 인용이 아닙니다.</p>
+        <div className="chronicle-change-summary"><small>무엇이 달라졌나</small><p>{selectedQuestion.changeSummaryKo}</p></div>
         <div className="v2-chronicle-grid">
           <aside className="v2-timeline-nav" aria-label="답변 시점">
-            <p>ANSWER HISTORY</p>
-            <ol>{selectedTimeline.map((signal) => <li key={signal.videoId} className={selectedSignal.videoId === signal.videoId ? "active" : ""}><button onClick={() => setSelectedSignalId(signal.videoId)}><span /><small>{shortDate(signal.publishedAt)}</small><b>{signal.stageKo}</b><em>{signal.viewpointKo}</em></button></li>)}</ol>
+            <p>ANSWER HISTORY · {selectedTimeline.length} / {selectedQuestion.episodeCount}</p>
+            <ol>{selectedTimeline.map((signal) => <li key={signal.videoId} className={`timeline-entry ${selectedSignal.videoId === signal.videoId ? "active" : ""}`}><button onClick={() => setSelectedSignalId(signal.videoId)}><span /><small>{shortDate(signal.publishedAt)}</small><b>{signal.stageKo}</b><em>{signal.viewpointKo}</em></button></li>)}</ol>
           </aside>
           <article className="v2-answer-detail">
             <div className="v2-detail-date"><span>{shortDate(selectedSignal.publishedAt)}</span><b>{selectedSignal.stageKo}</b><small>편집 요약 · 원본 연결</small></div>
@@ -313,6 +311,26 @@ export default function Chronicle() {
         <p>같은 질문, 달라진 답, 연결된 69편.</p>
         <div><span className="footer-versions"><a href="https://kim-dukjin-answer-chronicle-v1.socialkim.chatgpt.site/">V1</a><a href="https://kim-dukjin-answer-chronicle-v2.socialkim.chatgpt.site/">V2</a><a href="https://kim-dukjin-answer-chronicle-v3.socialkim.chatgpt.site/">V3</a><b>V4</b></span><span>BUILT WITH CODEX · POWERED BY CHATGPT 5.6SOL</span></div>
       </footer>
+
+      {compareOpen && <div className="compare-backdrop" role="presentation" onMouseDown={() => setCompareOpen(false)}>
+        <section className="compare-modal" role="dialog" aria-modal="true" aria-labelledby="compare-title" onMouseDown={(event) => event.stopPropagation()}>
+          <button className="compare-close" onClick={() => setCompareOpen(false)} aria-label="두 시점 비교 닫기">×</button>
+          <div className="compare-kicker"><span>ANSWER DELTA</span><b>변화 강도 · {changeLevel(selectedQuestion)}</b></div>
+          <h2 id="compare-title">최초의 답에서<br />현재의 관점까지.</h2>
+          <p className="compare-question">{selectedQuestion.questionKo}</p>
+          <div className="compare-columns">
+            {[firstSignal, latestSignal].map((signal, index) => <article key={signal.videoId}>
+              <span>{index === 0 ? "FROM · 최초 관점" : "TO · 최신 관점"}</span>
+              <time>{shortDate(signal.publishedAt)}</time>
+              <h3>{signal.pointKo}</h3>
+              <p>{signal.driverKo}</p>
+              <a href={signal.evidenceUrl} target="_blank" rel="noreferrer">원본 근거 보기 <ArrowIcon /></a>
+            </article>)}
+          </div>
+          <div className="compare-delta"><span>Δ</span><div><small>무엇이 달라졌나</small><p>{selectedQuestion.changeSummaryKo}</p></div></div>
+          <em>*69편의 방송 논점을 질문 단위로 연결한 편집 요약이며, 직접 인용이 아닙니다.</em>
+        </section>
+      </div>}
     </main>
   );
 }
