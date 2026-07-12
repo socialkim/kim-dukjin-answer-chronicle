@@ -8,7 +8,7 @@
 
 **[김덕진 답변 연대기 바로가기](https://kim-dukjin-answer-chronicle.socialkim.chatgpt.site)**
 
-## V2 질문 인텔리전스
+## V4 질문에서 답변 변화까지
 
 2026년 7월 12일 기준 플레이리스트에서 김덕진 출연분 69편을 확정했습니다.
 
@@ -18,6 +18,8 @@
 - 12개 카테고리, 60개 진화형 질문, 472개 질문 신호
 - 모든 영상에서 최소 4개 이상의 질문 시드 추출
 - 질문별 관련 방송 연대기와 에피소드별 근거 타임스탬프
+- V2의 질문 카드 → 답변 연대기 흐름을 60개 질문 전체 데이터로 확장
+- 질문마다 김덕진의 현재 종합 관점, 시점별 핵심 논점, 이전 답에서 달라진 점 제공
 - 공개 JSON: [`public/data/episodes.json`](public/data/episodes.json)
 - 질문 지도 JSON: [`public/data/question-atlas.json`](public/data/question-atlas.json)
 - 원문 자막은 `.cache/dukjin-transcripts/`에만 저장하며 Git에 커밋하지 않음
@@ -45,7 +47,9 @@ python scripts/build_question_atlas.py
 - 60개 질문 검색, 카테고리 필터와 질문별 방송 타임라인
 - 69편을 시간×주제로 탐색하는 인터랙티브 시그널 맵
 - 영상별 4~13개 질문 연결과 원본 근거 바로가기
-- 69편 대표 이미지를 활용한 방송용 V2 히어로
+- 이미지 없이 안정적인 텍스트 중심 V4 히어로
+- 시그널 맵과 김덕진 에피소드 69편 전수조사 탐색
+- 상단의 V1·V2·V3·V4 전환기로 이전 버전 비교
 - 원본 YouTube 영상 연결
 - Dukjin Global Video Studio 확장 프로그램 다운로드와 설치 안내
 - 모바일 반응형 UI와 키보드 접근성
