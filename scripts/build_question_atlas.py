@@ -258,9 +258,7 @@ def main() -> int:
             viewpoint = synthesis_steps[step_index]
             previous_step_index = round(((index - 1) / max(len(related) - 1, 1)) * (len(synthesis_steps) - 1)) if index else 0
             previous_viewpoint = synthesis_steps[previous_step_index]
-            point = (
-                f"‘{episode['thesisSeedKo']}’ 사례를 근거로, {viewpoint}"
-            )
+            point = viewpoint
             delta = (
                 "이 질문을 본격적으로 추적하기 시작한 첫 관점입니다."
                 if previous is None

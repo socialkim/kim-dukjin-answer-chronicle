@@ -60,4 +60,5 @@ test("publishes a many-to-many question atlas", async () => {
   assert.ok(atlas.questions.every((question) => question.signals.length >= 3));
   assert.ok(atlas.questions.every((question) => question.synthesisKo.length >= 80));
   assert.ok(atlas.questions.every((question) => question.signals.every((signal) => signal.pointKo && signal.deltaKo && signal.stageKo)));
+  assert.ok(atlas.questions.every((question) => question.signals.every((signal) => !signal.pointKo.includes("사례를 근거로"))));
 });
