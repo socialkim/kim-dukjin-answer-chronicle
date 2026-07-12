@@ -15,6 +15,8 @@ test("server-renders the complete 69-episode answer chronicle", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /김덕진 답변 연대기/);
+  assert.match(html, /V2 CURRENT/);
+  assert.match(html, /kim-dukjin-answer-chronicle-v1\.socialkim\.chatgpt\.site/);
   assert.match(html, /답은 바뀌었다/);
   assert.match(html, /69 EPISODES · 23H 33M · 69\/69 TRANSCRIPTS/);
   assert.match(html, /김덕진 에피소드 69편 전수조사/);

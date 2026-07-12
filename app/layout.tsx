@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const base = new URL(`${protocol}://${host}`);
-  const title = "김덕진 답변 연대기 | 같은 질문, 달라진 답";
+  const title = "김덕진 답변 연대기 V2 | 같은 질문, 달라진 답";
   const description = "김덕진 출연 69편·23시간 33분의 한국어 자막과 근거 시점을 전수 조사하고, 같은 AI 질문에 대한 답의 변화를 추적합니다.";
   return {
     metadataBase: base,
