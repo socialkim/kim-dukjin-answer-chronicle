@@ -6,7 +6,9 @@
 
 ## 공개 서비스
 
-**[김덕진 답변 연대기 바로가기](https://kim-dukjin-answer-chronicle.socialkim.chatgpt.site)**
+**[김덕진 답변 연대기 V5 바로가기](https://kim-dukjin-answer-chronicle-v5.socialkim.chatgpt.site)**
+
+기존 V4는 [별도 주소](https://kim-dukjin-answer-chronicle.socialkim.chatgpt.site)에서 그대로 비교할 수 있습니다.
 
 ## V5 원문 근거에서 예측 채점까지
 
