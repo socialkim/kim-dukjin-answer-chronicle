@@ -49,6 +49,13 @@ function Sparkline({ question }: { question: Question }) {
   );
 }
 
+function timelineSignals(question: Question) {
+  const signals = question.signals;
+  if (signals.length <= 3) return signals;
+  const indices = [0, .5, 1].map((ratio) => Math.round((signals.length - 1) * ratio));
+  return Array.from(new Set(indices)).map((index) => signals[index]);
+}
+
 export default function Chronicle() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("전체");
@@ -60,8 +67,8 @@ export default function Chronicle() {
     const needle = query.trim().toLowerCase();
     return atlas.questions.filter((question) => {
       const categoryMatch = category === "전체" || question.category === category;
-      const sourceTitles = question.signals.map((signal) => signal.title).join(" ");
-      const textMatch = !needle || `${question.questionKo} ${question.lensKo} ${question.category} ${sourceTitles}`.toLowerCase().includes(needle);
+      const sourceTitles = question.signals.map((signal) => `${signal.title} ${signal.pointKo} ${signal.deltaKo}`).join(" ");
+      const textMatch = !needle || `${question.questionKo} ${question.lensKo} ${question.category} ${question.synthesisKo} ${sourceTitles}`.toLowerCase().includes(needle);
       return categoryMatch && textMatch;
     });
   }, [category, query]);
@@ -83,7 +90,7 @@ export default function Chronicle() {
   return (
     <main>
       <header className="topbar">
-        <a className="brand" href="#top" aria-label="김덕진 답변 연대기 V2 홈">
+        <a className="brand" href="#top" aria-label="김덕진 답변 연대기 V3 홈">
           <span className="brand-mark">答</span>
           <span><b>김덕진 답변 연대기</b><small>AI ANSWER INTELLIGENCE</small></span>
         </a>
@@ -96,7 +103,8 @@ export default function Chronicle() {
         <div className="header-actions">
           <div className="version-switcher" aria-label="버전 전환">
             <a href="https://kim-dukjin-answer-chronicle-v1.socialkim.chatgpt.site/">V1</a>
-            <b aria-current="page">V2</b>
+            <a href="https://kim-dukjin-answer-chronicle-v2.socialkim.chatgpt.site/">V2</a>
+            <b aria-current="page">V3</b>
           </div>
           <a className="source-link" href={corpus.source.playlistUrl} target="_blank" rel="noreferrer">PLAYLIST <ArrowIcon /></a>
         </div>
@@ -105,9 +113,10 @@ export default function Chronicle() {
       <section className="hero" id="top">
         <div className="hero-ambient" aria-hidden="true"><i /><i /><i /></div>
         <div className="hero-copy">
-          <div className="hero-kicker"><span>V2 · LIVE INDEX</span><b>2025.01 — 2026.07</b></div>
-          <h1>69편의 방송에서<br /><em>60개의 질문</em>을<br />발견했습니다.</h1>
-          <p>김덕진 소장의 AI 인사이트를 영상 단위가 아니라 질문 단위로 다시 연결했습니다. 하나의 방송에서 여러 논점을 발견하고, 같은 질문이 시간에 따라 어디로 이동했는지 추적합니다.</p>
+          <div className="hero-kicker"><span>V3 · ANSWER CHRONICLE</span><b>2025.01 — 2026.07 · 69편 전수 기록</b></div>
+          <h1>답은 바뀌었다.<br /><em>기록은 남는다.</em></h1>
+          <p className="hero-lead">매주 달라지는 AI에 대한 김덕진의 답. 같은 질문에 대한 관점이 언제, 왜, 어떻게 바뀌었는지 원본 영상과 함께 추적합니다.</p>
+          <p className="hero-subcopy">김덕진 소장의 AI 인사이트를 영상 단위가 아니라 질문 단위로 다시 연결했습니다. 하나의 방송에서 여러 논점을 발견하고, 같은 질문이 시간에 따라 어디로 이동했는지 추적합니다.</p>
           <div className="hero-actions">
             <a href="#questions" className="primary-cta">질문 지도 탐색하기 <ArrowIcon /></a>
             <a href="#map" className="text-cta">69편 시그널 맵 보기 <span>↓</span></a>
@@ -163,16 +172,23 @@ export default function Chronicle() {
           <aside className="question-focus" aria-label="선택한 질문 상세">
             <div className="focus-label"><span>{selectedQuestion.category}</span><b>{selectedQuestion.firstObservedAt.slice(0, 7)} — {selectedQuestion.lastObservedAt.slice(0, 7)}</b></div>
             <h3>{selectedQuestion.questionKo}</h3>
-            <p>{selectedQuestion.changeSummaryKo}</p>
+            <div className="focus-synthesis">
+              <small>김덕진의 현재 종합 관점</small>
+              <p>{selectedQuestion.synthesisKo}</p>
+              <em>{selectedQuestion.editorialNoteKo}</em>
+            </div>
+            <div className="focus-change"><small>무엇이 달라졌나</small><p>{selectedQuestion.changeSummaryKo}</p></div>
             <div className="focus-metrics"><span><b>{selectedQuestion.episodeCount}</b>연결 방송</span><span><b>{selectedQuestion.seedCount}</b>논점 신호</span><span><b>{selectedQuestion.activityByMonth.length}</b>활성 월</span></div>
+            <div className="timeline-heading"><b>논점 변화 연대기</b><span>대표 시점 {timelineSignals(selectedQuestion).length}개</span></div>
             <div className="focus-timeline">
-              {selectedQuestion.signals.map((signal, index) => (
-                <a key={`${selectedQuestion.id}-${signal.videoId}`} href={signal.evidenceUrl} target="_blank" rel="noreferrer">
-                  <i />
-                  <time>{shortDate(signal.publishedAt)}</time>
-                  <span><b>{signal.signalKo}</b><small>{index === 0 ? "FIRST SIGNAL" : index === selectedQuestion.signals.length - 1 ? "LATEST SIGNAL" : "RELATED SIGNAL"}</small></span>
-                  <ArrowIcon />
-                </a>
+              {timelineSignals(selectedQuestion).map((signal) => (
+                <article key={`${selectedQuestion.id}-${signal.videoId}`}>
+                  <header><time>{shortDate(signal.publishedAt)}</time><b>{signal.stageKo}</b></header>
+                  <h4>당시 핵심 논점</h4>
+                  <p>{signal.pointKo}</p>
+                  <div><small>이전 답에서 달라진 점</small><p>{signal.deltaKo}</p></div>
+                  <div className="timeline-source"><span>근거 방송 · {signal.title}</span><a href={signal.evidenceUrl} target="_blank" rel="noreferrer">원본 시점 보기 <ArrowIcon /></a></div>
+                </article>
               ))}
             </div>
           </aside>
@@ -246,9 +262,9 @@ export default function Chronicle() {
       </section>
 
       <footer>
-        <div className="brand"><span className="brand-mark">答</span><span><b>김덕진 답변 연대기</b><small>AI ANSWER INTELLIGENCE · V2</small></span></div>
+        <div className="brand"><span className="brand-mark">答</span><span><b>김덕진 답변 연대기</b><small>AI ANSWER INTELLIGENCE · V3</small></span></div>
         <p>같은 질문, 달라진 답, 연결된 69편.</p>
-        <div><a href="https://kim-dukjin-answer-chronicle-v1.socialkim.chatgpt.site/">V1 ARCHIVE</a><span>BUILT WITH CODEX · POWERED BY CHATGPT 5.6SOL</span></div>
+        <div><span className="footer-versions"><a href="https://kim-dukjin-answer-chronicle-v1.socialkim.chatgpt.site/">V1</a><a href="https://kim-dukjin-answer-chronicle-v2.socialkim.chatgpt.site/">V2</a><b>V3</b></span><span>BUILT WITH CODEX · POWERED BY CHATGPT 5.6SOL</span></div>
       </footer>
     </main>
   );

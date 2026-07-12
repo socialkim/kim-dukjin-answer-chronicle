@@ -9,12 +9,13 @@ async function render() {
   return worker.fetch(new Request("http://localhost/", { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("renders the V2 question intelligence service", async () => {
+test("renders the V3 viewpoint chronicle service", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
-  assert.match(html, /69편의 방송에서/);
+  assert.match(html, /답은 바뀌었다/);
+  assert.match(html, /기록은 남는다/);
   assert.match(html, /60개의 질문/);
   assert.match(html, /472/);
   assert.match(html, /AI ANSWER INTELLIGENCE/);
@@ -26,6 +27,9 @@ test("renders the V2 question intelligence service", async () => {
   assert.match(html, /69편이 만든/);
   assert.match(html, /AI 지형도/);
   assert.match(html, /kim-dukjin-answer-chronicle-v1\.socialkim\.chatgpt\.site/);
+  assert.match(html, /kim-dukjin-answer-chronicle-v2\.socialkim\.chatgpt\.site/);
+  assert.match(html, /김덕진의 현재 종합 관점/);
+  assert.match(html, /이전 답에서 달라진 점/);
   assert.doesNotMatch(html, /사람 검수 대기|신뢰할 수 있는 연대기를 만드는 법|method-dashboard|review-strip/);
 });
 
@@ -40,4 +44,6 @@ test("publishes a many-to-many question atlas", async () => {
   assert.equal(atlas.episodes.length, 69);
   assert.ok(atlas.episodes.every((episode) => episode.questionSeeds.length >= 4));
   assert.ok(atlas.questions.every((question) => question.signals.length >= 3));
+  assert.ok(atlas.questions.every((question) => question.synthesisKo.length >= 80));
+  assert.ok(atlas.questions.every((question) => question.signals.every((signal) => signal.pointKo && signal.deltaKo && signal.stageKo)));
 });
