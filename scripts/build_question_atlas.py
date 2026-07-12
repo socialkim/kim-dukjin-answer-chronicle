@@ -212,7 +212,10 @@ def main() -> int:
     memberships: dict[str, set[str]] = defaultdict(set)
     for question in QUESTIONS:
         ranked = sorted(episodes, key=lambda ep: matrix[question["id"]][ep["videoId"]], reverse=True)
-        selected = [ep for ep in ranked if matrix[question["id"]][ep["videoId"]] >= 5][:8]
+        # Keep the complete high-confidence answer history instead of reducing
+        # every question to a small representative sample. Twenty-six is a UI
+        # safety ceiling; most questions naturally select fewer episodes.
+        selected = [ep for ep in ranked if matrix[question["id"]][ep["videoId"]] >= 8][:26]
         if len(selected) < 3:
             fallback = [ep for ep in ranked if ep["clusterId"] == question["clusterId"]]
             selected_by_id = {episode["videoId"]: episode for episode in selected}
