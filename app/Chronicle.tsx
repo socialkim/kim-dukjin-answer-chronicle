@@ -258,6 +258,10 @@ export default function Chronicle() {
           <a href="#global">Video Studio</a>
         </nav>
         <div className="header-actions">
+          <div className="version-switcher" aria-label="버전 전환">
+            <a href="https://kim-dukjin-answer-chronicle-v1.socialkim.chatgpt.site/">V1</a>
+            <b aria-current="page">V2</b>
+          </div>
           <button className="language-toggle" onClick={() => setLanguage(isEnglish ? "ko" : "en")} aria-label="언어 전환">
             <span className={!isEnglish ? "active" : ""}>KR</span><span className={isEnglish ? "active" : ""}>EN</span>
           </button>
@@ -267,7 +271,7 @@ export default function Chronicle() {
 
       <section className="hero" id="top">
         <div className="hero-grid" aria-hidden="true" />
-        <div className="eyebrow"><span /> 2025.01 — 2026.07 · 69편 전수 기록</div>
+        <div className="eyebrow"><span /> V2 CURRENT · 2025.01 — 2026.07 · 69편 전수 기록</div>
         <h1>{isEnglish ? <>Answers change.<br /><em>The record remains.</em></> : <>답은 바뀌었다.<br /><em>기록은 남는다.</em></>}</h1>
         <p>{isEnglish ? "Trace how Kim Dukjin's answers to the same AI questions evolved—week by week, with source videos." : "매주 달라지는 AI에 대한 김덕진의 답. 같은 질문에 대한 관점이 언제, 왜, 어떻게 바뀌었는지 원본 영상과 함께 추적합니다."}</p>
         <div className="search-shell" role="search">

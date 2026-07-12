@@ -32,6 +32,8 @@ button { color: inherit; }
 .topbar nav a { padding: 29px 0 25px; border-bottom: 3px solid transparent; }
 .topbar nav .nav-active { color: var(--blue); border-color: var(--blue); }
 .header-actions { justify-self: end; display: flex; align-items: center; gap: 18px; }
+.version-switcher { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 9px; font-weight: 900; letter-spacing: .08em; }
+.version-switcher a, .version-switcher b { padding: 6px 9px; border-radius: 999px; }.version-switcher b { background: var(--blue); color: white; }.version-switcher a { color: var(--muted); }
 .language-toggle { background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 3px; display: flex; cursor: pointer; }
 .language-toggle span { font-size: 10px; font-weight: 800; padding: 6px 8px; border-radius: 999px; color: var(--muted); }
 .language-toggle .active { background: var(--ink); color: white; }
