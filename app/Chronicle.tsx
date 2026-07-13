@@ -139,6 +139,10 @@ export default function Chronicle() {
             <a href="#questions" className="primary-cta">답이 바뀌는 질문 보기 <ArrowIcon /></a>
             <a href="#chronicle" className="text-cta">답변 연대기 바로가기 <span>↓</span></a>
           </div>
+          <div className="hero-promo-links" aria-label="김덕진 관련 공식 링크">
+            <a href="https://www.youtube.com/@%EC%86%90%EA%B2%BD%EC%A0%9C" target="_blank" rel="noreferrer"><small>ORIGINAL BROADCAST</small><b>손에잡히는경제 YouTube</b><ArrowIcon /></a>
+            <a href="https://litt.ly/kimdukjin" target="_blank" rel="noreferrer"><small>PROFILE &amp; LINKS</small><b>김덕진 소장 소개</b><ArrowIcon /></a>
+          </div>
           <div className="hero-stats">
             <span><b>69</b><small>EPISODES</small></span>
             <span><b>60</b><small>EVOLVING QUESTIONS</small></span>
@@ -359,6 +363,32 @@ export default function Chronicle() {
           <p>YouTube 영상을 열고 언어를 고르면 동기화 자막, 한 장의 인포그래픽, 근거 링크가 포함된 보고서로 바꿉니다.</p>
           <ul><li><b>8</b><span>지원 언어</span></li><li><b>3</b><span>콘텐츠 포맷</span></li><li><b>BYO</b><span>API 모델 선택</span></li></ul>
           <div><a href="https://github.com/socialkim/dukjin-global-english-companion/releases/download/v0.5.0-beta.1/dukjin-global-extension-v0.5.0.zip" className="primary-cta">확장 프로그램 v0.5 다운로드 <ArrowIcon /></a><a href="https://github.com/socialkim/dukjin-global-english-companion" target="_blank" rel="noreferrer" className="text-cta">GitHub에서 보기</a></div>
+        </div>
+      </section>
+
+      <section className="promo-hub-section" id="connect">
+        <div className="promo-hub-intro">
+          <span className="section-no">05 / CONNECT</span>
+          <div>
+            <h2>방송에서 더 보고,<br />김덕진을 더 알아보세요.</h2>
+            <p>연대기의 근거가 된 방송을 계속 시청하거나, 김덕진 소장의 활동과 공식 링크를 한곳에서 확인할 수 있습니다.</p>
+          </div>
+        </div>
+        <div className="promo-hub-grid">
+          <a className="promo-card promo-card-youtube" href="https://www.youtube.com/@%EC%86%90%EA%B2%BD%EC%A0%9C" target="_blank" rel="noreferrer">
+            <span className="promo-card-index">01</span>
+            <small>ORIGINAL BROADCAST · YOUTUBE</small>
+            <h3>손에잡히는경제</h3>
+            <p>김덕진 소장의 방송 원본과 손에잡히는경제의 최신 콘텐츠를 YouTube에서 이어서 보세요.</p>
+            <b>방송 채널 바로가기 <ArrowIcon /></b>
+          </a>
+          <a className="promo-card promo-card-profile" href="https://litt.ly/kimdukjin" target="_blank" rel="noreferrer">
+            <span className="promo-card-index">02</span>
+            <small>PROFILE · OFFICIAL LINKS</small>
+            <h3>김덕진 소장 소개</h3>
+            <p>IT커뮤니케이션연구소 김덕진 소장의 프로필과 다양한 활동, 공식 채널을 한 번에 만나보세요.</p>
+            <b>공식 프로필 바로가기 <ArrowIcon /></b>
+          </a>
         </div>
       </section>
 

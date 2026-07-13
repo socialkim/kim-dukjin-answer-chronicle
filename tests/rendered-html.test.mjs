@@ -39,6 +39,11 @@ test("renders the V5 evidence-first chronicle service", async () => {
   assert.match(html, /김덕진 명언 아카이브/);
   assert.match(html, /2026-07-06/);
   assert.match(html, /최초 ↔ 최신 두 시점 비교/);
+  assert.match(html, /손에잡히는경제 YouTube/);
+  assert.match(html, /김덕진 소장 소개/);
+  assert.match(html, /https:\/\/www\.youtube\.com\/@%EC%86%90%EA%B2%BD%EC%A0%9C/);
+  assert.match(html, /https:\/\/litt\.ly\/kimdukjin/);
+  assert.equal((html.match(/https:\/\/litt\.ly\/kimdukjin/g) ?? []).length, 2);
   const renderedAtlas = JSON.parse(await readFile(new URL("../public/data/question-atlas.json", import.meta.url), "utf8"));
   assert.equal((html.match(/timeline-entry/g) ?? []).length, renderedAtlas.questions[0].signals.length);
   assert.equal(renderedAtlas.questions[0].signals.length, renderedAtlas.questions[0].episodeCount);
@@ -49,6 +54,7 @@ test("renders the V5 evidence-first chronicle service", async () => {
   assert.ok(html.indexOf('id="quotes"') < html.indexOf('id="map"'));
   assert.ok(html.indexOf('id="map"') < html.indexOf('id="corpus"'));
   assert.ok(html.indexOf('id="corpus"') < html.indexOf('id="movement"'));
+  assert.ok(html.indexOf('id="studio"') < html.indexOf('id="connect"'));
   assert.doesNotMatch(html, /사람 검수 대기|신뢰할 수 있는 연대기를 만드는 법|method-dashboard|review-strip/);
 });
 
