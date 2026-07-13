@@ -95,6 +95,73 @@ QUESTIONS = [
 ]
 
 
+# Editorial synthesis of the recurring position across the linked episodes.
+# These are paraphrases for navigation, not verbatim quotations; every timeline
+# entry links back to the timestamped source so readers can verify the context.
+SYNTHESIS = {
+    "openai-lead": "OpenAI의 선두는 모델 점수 하나로 고정되지 않습니다. 초기의 기술 우위는 분명했지만, 이후 비용·서비스 안정성·제휴 구조·배포 채널까지 경쟁축이 넓어졌습니다. 현재 관점은 ‘여전히 가장 강한 기준점이지만, 독주를 전제할 수 없는 1위’에 가깝습니다.",
+    "openai-model": "새 GPT의 평가는 벤치마크보다 실제 업무에서의 정확도·속도·도구 연결성을 함께 봐야 합니다. 출시 전 기대에서 출발해 환각과 체감 격차를 경계했고, 최근에는 성능 향상 자체보다 어떤 작업에서 확실히 나아졌는지를 구분하는 쪽으로 판단이 정교해졌습니다.",
+    "openai-reliability": "대규모 AI 서비스의 신뢰성은 모델 성능과 별개의 경쟁력입니다. 이용자와 기능이 늘수록 장애와 품질 편차가 커질 수 있으므로, 중요한 업무에서는 단일 서비스 의존보다 대체 모델·검증 절차·작업 기록을 함께 준비해야 한다는 결론입니다.",
+    "openai-economics": "OpenAI의 가장 큰 변수는 기술이 아니라 막대한 추론·인프라 비용을 감당할 사업 구조입니다. 자금 조달과 대형 제휴가 성장을 지탱했지만, 기능 정리와 비용 통제가 반복되면서 ‘매출 성장 속도가 컴퓨팅 지출을 따라잡을 수 있는가’가 핵심 질문으로 이동했습니다.",
+    "openai-alliance": "OpenAI와 Microsoft의 관계는 단순한 후원에서 상호 의존과 견제가 공존하는 구조로 바뀌었습니다. 독자 인프라와 반구글 연합을 넓히는 움직임은 협력의 종료보다 협상력 재조정으로 읽어야 하며, 장기 우위는 어느 한 회사보다 파트너 생태계의 결속에 달려 있습니다.",
+    "google-platform": "Google의 강점은 Gemini 한 모델이 아니라 검색·안드로이드·워크스페이스·클라우드에 AI를 기본 기능으로 배포할 수 있다는 점입니다. 성능 추격 국면을 지나 이제는 기존 서비스 전체를 AI 운영체제처럼 묶는 통합력이 경쟁의 중심이라는 판단입니다.",
+    "google-search": "AI 검색은 링크 목록을 답변으로 바꾸며 제로클릭을 가속합니다. 이용자 편의는 커지지만 창작자 유입과 광고 구조가 흔들리므로, 검색의 승부는 답변 품질뿐 아니라 출처·보상·웹 생태계를 얼마나 지속 가능하게 설계하느냐에 달려 있습니다.",
+    "google-gemini": "Gemini의 반등은 일회성 모델 점프보다 TPU, 검색 데이터, 모바일 유통망이 동시에 작동한 결과입니다. ChatGPT와의 격차를 모델별로 단정하기보다 멀티모달 성능과 제품 통합이 계속 강화되는 구조적 경쟁자로 봐야 합니다.",
+    "google-chip": "Google의 자체 AI칩은 NVIDIA를 즉시 대체하기보다 자사 서비스 비용과 공급망을 통제하는 수단입니다. TPU가 강해질수록 빅테크의 수직 통합은 빨라지지만, 범용 개발 생태계에서는 GPU의 소프트웨어 우위가 여전히 큰 장벽입니다.",
+    "google-robot": "Google의 로봇 경쟁력은 하드웨어 생산보다 범용 행동 모델과 현실 세계 데이터에 있습니다. ‘로봇의 뇌’가 빠르게 진화해도 안전한 반복 수행과 현장 통합이 남아 있어, 지능의 퀀텀점프가 곧바로 대량 상용화를 뜻하지는 않습니다.",
+    "claude-performance": "Claude의 강점은 긴 문맥, 글쓰기, 코딩처럼 복잡한 작업에서 일관된 결과를 내는 데 있습니다. 최근의 압도적 체감은 모델 크기만이 아니라 도구 사용·추론 설계·개발자 경험을 함께 최적화한 결과로 해석됩니다.",
+    "claude-safety": "Anthropic의 안전 철학은 브랜드 선언을 넘어 모델 설계와 정부·고객과의 갈등에서 실제 제약으로 작동합니다. 다만 안전을 경쟁 우위로 유지하려면 경고만이 아니라 측정 가능한 기준과 외부 검증, 사업적 지속 가능성을 함께 보여줘야 합니다.",
+    "claude-cloud": "Anthropic은 Amazon과 Google의 자본·클라우드가 필요하지만 특정 파트너에 종속될 위험도 큽니다. 최근의 갈등은 독립 모델 회사가 인프라 제공자와 경쟁자 사이에서 얼마나 협상력을 확보할 수 있는지를 보여주는 사례입니다.",
+    "claude-business": "Claude의 고성능은 프리미엄 가격을 정당화할 수 있지만, 지속 가능한 사업은 사용량 증가가 곧 손실 확대로 이어지지 않아야 합니다. 기업 고객의 높은 지불 의사와 추론 비용 절감이 함께 진행될 때 비로소 수익 구조가 성립합니다.",
+    "claude-governance": "AI 기업과 정부의 충돌은 안전 원칙과 국가 경쟁력이 부딪히는 지점에서 커집니다. 기업의 자율 규범만으로는 부족하고, 위험 공개·감사·조달 기준처럼 검증 가능한 거버넌스가 필요하다는 쪽으로 관점이 구체화됐습니다.",
+    "china-cost": "중국 AI의 가장 큰 충격은 최고 점수보다 ‘쓸 만한 성능을 훨씬 낮은 비용으로 공급한다’는 데 있습니다. 95점짜리 모델이 100점 모델의 가격 구조를 무너뜨리면 시장의 기준은 절대 성능에서 비용 대비 성능으로 이동합니다.",
+    "china-open": "중국의 오픈 모델 전략은 제한된 자원 아래에서 빠른 확산과 생태계 확보를 노리는 선택입니다. 공개 범위와 투명성에는 차이가 있지만, Qwen·DeepSeek 계열의 확산은 서구 폐쇄형 모델의 가격과 배포 전략을 압박하고 있습니다.",
+    "china-speed": "중국 AI 생태계의 속도는 모델 출시뿐 아니라 제조·모바일·서비스 현장에 즉시 적용하는 데서 나옵니다. 완성도를 기다리기보다 빠르게 배포하고 개선하는 방식이 누적되면서 기술 격차를 줄이는 구조로 평가됩니다.",
+    "china-adoption": "미국 스타트업이 중국 AI를 고르는 이유는 이념보다 비용·성능·오픈 배포의 실용성입니다. 보안과 규제 위험은 남지만, 조달 현장에서는 출신보다 단위 경제성이 선택을 움직이기 시작했습니다.",
+    "china-geopolitics": "미중 AI 경쟁은 한 개의 최고 모델보다 반도체·오픈소스·모바일·제조 생태계가 맞붙는 장기전입니다. 수출 통제가 속도를 늦출 수는 있어도 대체 기술과 비용 혁신을 자극하므로, 단선적인 승패보다 각 진영의 확산력을 봐야 합니다.",
+    "agent-useful": "AI 에이전트는 ‘사람 없이 모든 일을 처리하는 존재’보다 반복 업무를 여러 도구에 걸쳐 이어주는 실행 계층에서 먼저 가치를 냅니다. 초기의 느리고 불안정한 데모를 지나, 지금은 좁은 범위·명확한 승인·로그가 있는 업무부터 쓰는 것이 현실적입니다.",
+    "agent-browser": "브라우저를 장악한 AI는 검색·쇼핑·예약·업무 실행의 관문을 차지할 수 있습니다. 그러나 느린 실행과 보안·오작동 문제가 남아 있어, 브라우저가 사라진다기보다 사람이 하던 클릭을 에이전트가 대신하는 인터페이스로 재편될 가능성이 큽니다.",
+    "agent-mcp": "MCP의 의미는 모델 성능을 높이는 데 있지 않고 서로 다른 데이터와 도구를 공통 방식으로 연결하는 데 있습니다. 표준이 넓게 채택될수록 에이전트 개발 비용은 낮아지지만, 권한 관리와 신뢰할 수 있는 도구 실행이 다음 병목입니다.",
+    "agent-autonomy": "자율성은 한 번에 최대치로 열어줄 기능이 아니라 위험도에 따라 단계적으로 부여해야 합니다. 추천에서 실행으로 넘어갈수록 사람의 승인, 되돌리기, 감사 로그가 중요해지며 최종 의사결정 책임은 인간 조직에 남습니다.",
+    "agent-personal": "개인 AI는 스마트폰을 즉시 없애기보다 스마트폰 안팎의 앱을 대신 조정하는 개인 인터페이스가 될 가능성이 큽니다. 기억·맥락·행동 권한이 모일수록 편의는 커지지만 프라이버시와 플랫폼 종속이 핵심 대가가 됩니다.",
+    "coding-replace": "AI 코딩은 초급 구현과 반복 작업을 빠르게 대체하지만 개발자의 역할 전체를 없애지는 않습니다. 코드를 직접 쓰는 비중은 줄고, 문제 정의·아키텍처·검증·보안 책임이 커지면서 ‘개발자 수’보다 ‘필요한 개발자 역량’이 먼저 바뀝니다.",
+    "coding-vibe": "바이브 코딩은 아이디어를 제품으로 만드는 진입 장벽을 크게 낮췄지만, 느낌만으로 운영 품질까지 보장하지는 못합니다. 프로토타입에는 강력하고, 실제 서비스에서는 요구사항·테스트·관찰 가능성을 붙이는 순간부터 전문 개발 방식과 다시 만납니다.",
+    "coding-tools": "최고의 코딩 도구는 하나로 고정되지 않고 코드베이스 이해, 에이전트 실행, 검토 흐름에 따라 달라집니다. 데모 속도보다 기존 저장소에서의 정확도와 수정 통제, 비용을 비교해 작업별 도구 조합을 선택해야 합니다.",
+    "coding-quality": "AI가 만든 코드는 그럴듯함과 정확함 사이의 간극이 큽니다. 생성 속도가 빨라질수록 리뷰·테스트·의존성 점검·비밀정보 보호를 자동화해야 하며, 책임 없는 자동 생성은 기술 부채를 더 빠르게 쌓을 수 있습니다.",
+    "coding-skill": "AI 시대 개발자의 핵심 역량은 문법 암기보다 문제를 구조화하고 결과를 검증하는 능력입니다. 좋은 질문, 시스템 설계, 도메인 이해, 실패를 추적하는 힘이 코드를 직접 타이핑하는 속도보다 중요해졌습니다.",
+    "jobs-cuts": "AI 일자리 충격은 모든 직업의 동시 소멸보다 신규 채용 축소와 업무 재편으로 먼저 나타납니다. 특히 반복적인 사무·초급 지식 노동이 압박받고, 조직이 에이전트를 운영 체계에 넣는 시점부터 감축 속도가 빨라질 수 있습니다.",
+    "jobs-professional": "딥리서치와 생성형 AI는 전문직의 조사·초안·분석 시간을 크게 줄입니다. 전문직이 사라진다기보다 정보 접근의 희소성이 약해지고, 판단 책임·고객 맥락·검증 능력이 새로운 차별점이 됩니다.",
+    "jobs-intelligence": "AI 의존은 생산성을 높이는 동시에 스스로 생각하고 기억하는 능력을 약화시킬 수 있습니다. 답을 받는 도구가 아니라 반론·비교·검증을 요구하는 사고 파트너로 쓸 때 인간 지능의 대체가 아니라 증폭이 됩니다.",
+    "jobs-resilience": "기술 변화가 빠를수록 특정 도구 숙련보다 회복탄력성이 오래가는 경쟁력입니다. 실패를 작게 실험하고 학습 속도를 높이며 자신의 역할을 재설계하는 능력이 AI 시대의 안전망이라는 관점이 일관됩니다.",
+    "jobs-literacy": "AI 문해력은 프롬프트 요령이 아니라 모델의 한계, 데이터, 비용, 저작권, 검증을 이해하고 업무에 적용하는 능력입니다. 모든 직무의 기본기가 되되 직무별 도메인 지식과 결합될 때 실제 성과로 이어집니다.",
+    "chip-nvidia": "NVIDIA의 해자는 GPU 성능보다 CUDA·네트워킹·개발자 생태계를 묶은 플랫폼에 있습니다. 자체칩과 경쟁 가속기가 늘어 독점 강도는 낮아져도, AI 에이전트와 피지컬 AI가 새 수요를 만들며 플랫폼 지배력은 쉽게 사라지지 않습니다.",
+    "chip-memory": "AI 경쟁의 병목은 연산칩만이 아니라 데이터를 빠르게 공급하는 HBM과 메모리 시스템입니다. 모델이 커지고 추론량이 늘수록 메모리 대역폭·전력·패키징이 성능과 비용을 함께 결정하므로 한국 산업에도 중요한 기회가 됩니다.",
+    "chip-custom": "빅테크의 자체칩은 특정 워크로드에서 비용을 낮추고 NVIDIA 협상력을 줄입니다. 다만 범용성·소프트웨어 생태계·개발 편의 때문에 GPU를 완전히 밀어내기보다 혼합 인프라가 표준이 될 가능성이 큽니다.",
+    "infra-datacenter": "AI 데이터센터 투자는 수요가 큰 만큼 전력·감가상각·모델 효율 개선이라는 위험을 안고 있습니다. ‘더 많이 지으면 승리’가 아니라 실제 사용량과 장기 계약, 칩 세대 전환을 견딜 자본 구조가 있는지가 관건입니다.",
+    "infra-cloud": "AI 컴퓨팅을 클라우드로 팔면 거대한 수요를 매출로 바꿀 수 있지만, 높은 칩 비용과 가격 경쟁 때문에 매출이 곧 이익은 아닙니다. 가동률·전력비·고객 락인이 함께 맞아야 지속 가능한 인프라 사업이 됩니다.",
+    "physical-humanoid": "휴머노이드 양산은 시연 영상보다 공장 안에서 반복 작업을 안전하고 싸게 수행할 수 있느냐가 기준입니다. 자동차 제조 역량은 강점이지만 손·배터리·학습 데이터·정비까지 해결해야 하므로 단계적 상용화가 현실적입니다.",
+    "physical-manufacturing": "제조 AI가 어려운 이유는 데이터가 문서가 아니라 센서와 공정 속에 흩어져 있고 실패 비용이 크기 때문입니다. 범용 모델보다 현장 데이터 수집, 디지털 트윈, 작업자와의 통합이 선행돼야 진짜 생산성으로 이어집니다.",
+    "physical-brain": "범용 로봇의 핵심은 모든 동작을 미리 코딩하지 않고 보고 이해해 행동하는 모델입니다. 로봇의 뇌가 발전해도 몸의 신뢰성, 실시간 제어, 안전 검증이 함께 올라와야 범용성이 현실이 됩니다.",
+    "physical-device": "스마트폰 이후의 인터페이스는 단일 신기기보다 음성·안경·로봇·브라우저 에이전트가 결합한 형태일 가능성이 큽니다. AI가 사용자의 의도를 이해해 여러 기기를 조정하면서 화면 중심 사용은 점차 줄어들 수 있습니다.",
+    "physical-autonomy": "현실 세계의 자율 시스템은 디지털 에이전트보다 훨씬 높은 안전 기준이 필요합니다. 능력이 커질수록 제한 구역, 이중 확인, 비상 정지, 책임 소재를 설계해야 하며 완전 자율보다 감독 가능한 자율이 먼저 확산됩니다.",
+    "content-image": "참조 기반 이미지 생성은 디자인 제작의 속도와 접근성을 크게 높입니다. 디자이너의 역할은 픽셀 생산에서 방향 설정·브랜드 일관성·선별로 이동하고, 원본과 스타일의 권리 처리가 산업 표준이 되어야 합니다.",
+    "content-video": "AI 영상은 제작비를 낮추고 소규모 팀의 표현 범위를 넓히지만, 기획·편집·일관성 유지 비용은 남습니다. 짧은 포맷부터 빠르게 상용화되고, 장편은 제어 가능성과 저작권이 개선될수록 확산될 것입니다.",
+    "content-copyright": "AI 창작의 핵심 쟁점은 결과물 소유만이 아니라 학습·참조 과정의 동의와 출처입니다. 창작자를 배제한 효율화는 오래가기 어렵고, 라이선스·출처 표시·보상 구조가 도구 경쟁력의 일부가 됩니다.",
+    "content-safety": "생성형 AI의 성인·유해 콘텐츠 문제는 단순 차단과 전면 허용 사이의 선택이 아닙니다. 연령 확인, 명시적 동의, 실존 인물 보호, 생성물 표시를 층별로 적용해야 표현의 자유와 피해 방지를 함께 다룰 수 있습니다.",
+    "content-discovery": "AI 검색은 창작자의 콘텐츠를 요약해 이용자에게 전달하면서 원문 방문을 줄일 수 있습니다. 창작자는 검색 최적화만이 아니라 직접 구독·브랜드 신뢰·인용 가능한 원본 데이터를 강화해야 합니다.",
+    "meta-talent": "Meta의 AI 인재 영입은 단기간에 연구 역량을 끌어올리지만 인재 숫자만으로 제품 우위를 보장하지는 않습니다. 컴퓨팅·조직 통합·제품 배포가 함께 맞을 때 초고액 영입이 기술 리더십으로 전환됩니다.",
+    "meta-super": "Meta의 초지능 투자는 SNS 광고 사업에서 나온 현금을 차세대 플랫폼 주도권으로 바꾸려는 장기 베팅입니다. 투자 규모보다 연구 조직을 실제 제품과 클라우드 수익으로 연결할 수 있는지가 성패를 가릅니다.",
+    "meta-open": "Meta의 오픈소스 전략은 개발자 생태계를 넓혀 폐쇄형 모델의 표준화를 견제해 왔습니다. 다만 비용과 수익 압력이 커지면서 완전 개방보다 선택적 공개로 이동할 수 있어, 오픈 전략 자체도 사업 모델과 함께 봐야 합니다.",
+    "meta-cloud": "Meta의 클라우드 진출은 남는 컴퓨팅을 파는 부업이 아니라 막대한 AI 투자를 외부 매출로 회수하려는 시도입니다. 자체 모델·광고 데이터·인프라를 묶을 수 있지만 기존 클라우드와 다른 신뢰·지원 체계를 증명해야 합니다.",
+    "meta-social": "Meta의 강점은 수십억 이용자에게 AI 기능을 즉시 배포하고 피드백을 얻는 소셜 유통망입니다. 모델 1등이 아니어도 개인화·광고·메신저 접점을 장악하면 일상 AI 경쟁에서 유리할 수 있습니다.",
+    "business-cash": "AI 기업의 현금 소진은 기술 성장의 부산물이 아니라 생존을 가르는 핵심 변수입니다. 대규모 투자만으로 해결되지 않으며 추론 비용 절감, 반복 매출, 인프라 계약의 유연성이 함께 개선돼야 합니다.",
+    "business-unit": "AI 서비스의 단위 경제성은 사용자 증가보다 사용자 한 명이 쓰는 컴퓨팅 비용과 지불액의 관계로 판단해야 합니다. 고성능 기능을 무제한 제공하는 단계에서 사용량별 가격·모델 라우팅·비용 통제로 이동하는 흐름이 뚜렷합니다.",
+    "business-adoption": "기업 AI는 실험 계정을 늘리는 단계에서 핵심 업무의 시간·품질·매출을 바꾸는 단계로 넘어가야 합니다. 범용 도구를 배포하는 것보다 데이터 연결, 책임자, 성과 지표, 현업 재설계가 도입의 성패를 좌우합니다.",
+    "business-alliance": "AI 플랫폼 경쟁은 단독 모델전보다 칩·클라우드·데이터·배포 채널을 묶는 동맹전입니다. 제휴는 약점을 빠르게 메우지만 이해관계가 바뀌면 균열도 생기므로, 파트너 수보다 대체 가능성과 협상력이 중요합니다.",
+    "business-interface": "AI 시대의 핵심 인터페이스는 사용자의 의도를 가장 먼저 받아 실제 행동까지 연결하는 곳입니다. 브라우저·메신저·스마트폰·에이전트가 경쟁하며, 승자는 화면을 독점한 회사보다 맥락과 실행 권한을 신뢰받는 회사가 될 가능성이 큽니다.",
+}
+
+
 def normalize(value: str) -> str:
     return re.sub(r"\s+", " ", value.lower()).strip()
 
@@ -145,7 +212,10 @@ def main() -> int:
     memberships: dict[str, set[str]] = defaultdict(set)
     for question in QUESTIONS:
         ranked = sorted(episodes, key=lambda ep: matrix[question["id"]][ep["videoId"]], reverse=True)
-        selected = [ep for ep in ranked if matrix[question["id"]][ep["videoId"]] >= 5][:8]
+        # Keep the complete high-confidence answer history instead of reducing
+        # every question to a small representative sample. Twenty-six is a UI
+        # safety ceiling; most questions naturally select fewer episodes.
+        selected = [ep for ep in ranked if matrix[question["id"]][ep["videoId"]] >= 8][:26]
         if len(selected) < 3:
             fallback = [ep for ep in ranked if ep["clusterId"] == question["clusterId"]]
             selected_by_id = {episode["videoId"]: episode for episode in selected}
@@ -181,13 +251,33 @@ def main() -> int:
         )
         signals = []
         months = Counter()
-        for episode in related:
+        synthesis_steps = [part.strip() for part in re.split(r"(?<=\.)\s+", SYNTHESIS[question["id"]]) if part.strip()]
+        for index, episode in enumerate(related):
             months[month_key(episode["publishedAt"])] += 1
+            previous = related[index - 1] if index > 0 else None
+            is_latest = index == len(related) - 1
+            stage = "최초 관점" if index == 0 else "현재 관점" if is_latest else "관점 확장"
+            step_index = round((index / max(len(related) - 1, 1)) * (len(synthesis_steps) - 1))
+            viewpoint = synthesis_steps[step_index]
+            previous_step_index = round(((index - 1) / max(len(related) - 1, 1)) * (len(synthesis_steps) - 1)) if index else 0
+            previous_viewpoint = synthesis_steps[previous_step_index]
+            point = viewpoint
+            delta = (
+                "이 질문을 본격적으로 추적하기 시작한 첫 관점입니다."
+                if previous is None
+                else f"이전의 ‘{previous['thesisSeedKo']}’에서 ‘{episode['thesisSeedKo']}’로 근거가 바뀌면서, "
+                + (f"판단도 ‘{previous_viewpoint}’에서 ‘{viewpoint}’로 이동했습니다." if previous_viewpoint != viewpoint else "같은 판단을 다른 시장 신호로 보강했습니다.")
+            )
             signal = {
                 "videoId": episode["videoId"],
                 "publishedAt": episode["publishedAt"],
                 "title": episode["title"],
                 "signalKo": f"{episode['thesisSeedKo']} · {question['lensKo']} 관점",
+                "stageKo": stage,
+                "viewpointKo": viewpoint,
+                "pointKo": point,
+                "deltaKo": delta,
+                "driverKo": episode["thesisSeedKo"],
                 "url": episode["url"],
                 "evidenceUrl": episode["evidenceAnchor"]["url"] if episode.get("evidenceAnchor") else episode["url"],
                 "score": matrix[question["id"]][episode["videoId"]],
@@ -201,6 +291,13 @@ def main() -> int:
                 "evidenceUrl": signal["evidenceUrl"],
             })
         earliest, latest = signals[0], signals[-1]
+        if len(signals) == 1:
+            change_summary = f"{earliest['publishedAt'][:7]}에 ‘{earliest['driverKo']}’를 중심으로 이 질문이 처음 포착됐습니다."
+        else:
+            change_summary = (
+                f"초기에는 ‘{earliest['driverKo']}’가 핵심 사례였고, "
+                f"최근에는 ‘{latest['driverKo']}’까지 판단 범위가 넓어졌습니다."
+            )
         public_questions.append({
             "id": question["id"],
             "category": question["category"],
@@ -211,7 +308,9 @@ def main() -> int:
             "seedCount": len(signals),
             "firstObservedAt": earliest["publishedAt"],
             "lastObservedAt": latest["publishedAt"],
-            "changeSummaryKo": f"{earliest['publishedAt'][:7]}의 ‘{earliest['signalKo']}’에서 {latest['publishedAt'][:7]}의 ‘{latest['signalKo']}’로 논점이 이동했습니다.",
+            "changeSummaryKo": change_summary,
+            "synthesisKo": SYNTHESIS[question["id"]],
+            "editorialNoteKo": "69편의 방송 논점을 질문 단위로 연결한 편집 요약이며, 직접 인용이 아닙니다.",
             "activityByMonth": [{"month": month, "count": count} for month, count in sorted(months.items())],
             "signals": signals,
         })
@@ -243,7 +342,7 @@ def main() -> int:
 
     seed_counts = [episode["questionSeedCount"] for episode in episodes_public]
     output = {
-        "schemaVersion": "2.0.0",
+        "schemaVersion": "3.0.0",
         "source": {"playlistUrl": corpus["source"]["playlistUrl"], "episodeCount": len(episodes)},
         "totals": {
             "questions": len(public_questions),
